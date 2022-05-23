@@ -47,31 +47,53 @@ margin-top: 50px;
 
    width: 75%;
    float: right;
+   border-radius: 10px;
 }
 
 .texte1{
-   padding: 40px;
+   padding: 60px;
    background-color: rgb(227, 248, 225);
    position: absolute;
-   width: 45%;
+   width: 50%;
    /* height: 200px; */
    left: 0;
    margin-top: 3rem;
    text-align: center;
+   border-radius: 10px;
 }
 
-@media only screen and (max-width: 1294px) {
+@media only screen and (max-width: 1400px) {
+   main{
+      height: 560px;
+   }
+}
+
+@media only screen and (max-width: 1319px) {
+   .texte1{
+      width: 60%;
+   }
+   main{
+      height: 530px;
+   }
+}
+
+ @media only screen and (max-width: 1200px) {
    .intro-img{
       float:none;
+      width: 75%;
    }
    main{
       position:static;
    }
    .texte1{
       position: static;
+      margin: 2rem auto;
+      width: 75%;
    }
    main{
       height: auto;
+      text-align: center;
+      margin-top: 2rem;
    }
 }
 
