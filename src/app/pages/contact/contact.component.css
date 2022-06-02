@@ -1,0 +1,43 @@
+
+.titreForm{
+    text-align: center;
+    margin-top: 2rem;
+    
+    font-family: sans-serif;
+    background-color:aliceblue;
+    border-radius: 10px;
+}
+.titreForm>h2{
+    margin-bottom: 0;
+}
+
+input, textarea{
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+input{
+    height: 45px;
+}
+textarea{
+    height: 90px;
+}
+.buttonForm{
+    /* text-align: center; */
+    margin: 1rem 0;
+}
+.buttonForm>button{
+    /* text-align: center; */
+    height: 45px;
+    font-size: 1.1rem;
+}
+
+/* ////// gestion footer ////// */
+.containerForm{
+    margin-bottom: 250px;
+}
+@media only screen and (max-width: 991px) {
+    .containerForm{
+        margin-bottom: 320px;
+    }
+}
+

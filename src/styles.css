@@ -17,6 +17,7 @@ body{
     background-image: url('src/assets/images/acc2.jpg'); 
     background-size: cover;
     background-attachment: fixed;
+
 }
 
 .titre1{
@@ -86,12 +87,14 @@ position: relative;
 }
 
 footer{
-   
+   width: 100%;
    margin-bottom: 0;
    padding: 40px 0;
    background-color:rgb(31, 78, 31);
    text-align: center;
    color: aliceblue;
+    /* position: absolute;
+   bottom: 0;  */
 }   
 
 @media only screen and (max-width: 1515px) {
@@ -170,6 +173,7 @@ footer{
    }
    footer{
       margin-top: 0;
+
    }
 }
  @media only screen and (max-width: 991px) {
@@ -177,6 +181,11 @@ footer{
        padding: 20px;
     }
  }
+ @media only screen and (max-width: 323px) {
+   .bjv{
+      display: none;
+   }
+}
 
 
 
