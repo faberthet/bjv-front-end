@@ -1,10 +1,19 @@
-
-.titreForm{
-    text-align: center;
+.containerForm{
     margin-top: 2rem;
-    
+}
+.formBox{
+    box-shadow: -1px 1px 60px 10px black;
+    background-color: rgba(0, 0, 0, 0.404);
+    width: 75%;
+    margin: auto;
+    padding: 20px;
+}
+.titreForm{
+    /* text-align: center; */
+    margin-top: 2rem;
+    color: aliceblue;
     font-family: sans-serif;
-    background-color:aliceblue;
+    /* background-color:aliceblue; */
     border-radius: 10px;
 }
 .titreForm>h2{
@@ -13,7 +22,8 @@
 
 input, textarea{
     font-size: 1.1rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    margin-bottom: 1rem;
 }
 input{
     height: 45px;
@@ -34,6 +44,7 @@ textarea{
 /* ////// gestion footer ////// */
 .containerForm{
     margin-bottom: 250px;
+    color: white;
 }
 @media only screen and (max-width: 991px) {
     .containerForm{
