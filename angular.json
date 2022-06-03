@@ -106,5 +106,7 @@
       }
     }
   },
-  "defaultProject": "bjv"
+  "cli": {
+    "analytics": false
+  }
 }
