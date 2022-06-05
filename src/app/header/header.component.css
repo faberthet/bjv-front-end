@@ -1,0 +1,14 @@
+.titre1{
+    text-align: center;
+    margin: 40px 0;
+    padding: 15px 0;
+    color: aliceblue;
+    text-shadow: 2px 2px 2px black;
+    
+    }
+
+    @media only screen and (max-width: 991px) {
+    .titre1{
+        display: none;
+     }
+    }
