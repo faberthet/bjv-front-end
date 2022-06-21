@@ -12,6 +12,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IntroComponent } from './pages/intro/intro.component';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,9 @@ import { IntroComponent } from './pages/intro/intro.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

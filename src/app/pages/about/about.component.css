@@ -21,7 +21,8 @@
 
 .about{
     padding: 20px;
-    background-color:cadetblue;
+    /* background-color:cadetblue; */
+    background-color:lightskyblue;
     position: absolute;
     width: 600px;
     left: 100px;

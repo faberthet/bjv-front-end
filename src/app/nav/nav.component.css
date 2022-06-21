@@ -1,8 +1,6 @@
 nav{
-    /* background-color: rgba(49, 126, 49, 0.65); */
     background-color: rgba(31, 78, 31, 0.65);
     font-weight: bold;
-    
  }
 
  @media only screen and (max-width: 991px) {
