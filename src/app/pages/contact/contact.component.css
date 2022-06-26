@@ -40,12 +40,23 @@ textarea{
     /* text-align: center; */
     margin: 1rem 0;
 }
-.buttonForm>button{
+.button-not-submitted{
     /* text-align: center; */
     height: 45px;
     font-size: 1.1rem;
 }
+.button-submitted{
+   display: none;
+}
 
+.not-submitted{
+display: none;
+}
+.submitted{
+display: block;
+height: 45px;
+font-size: 1.1rem;
+}
 /* ////// gestion footer ////// */
 .containerForm{
     margin-bottom: 70px;

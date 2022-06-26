@@ -37,7 +37,8 @@
                 </div>
             </div>
             <div class="buttonForm">
-                <button type="submit" class="btn btn-primary">Envoyez</button>
+                <button type="submit" class="btn btn-primary" [class]="buttonState">Envoyez</button>
+                <div [class]="state">Envoi en cours...</div>
             </div>
         </form>
     </div>

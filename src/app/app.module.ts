@@ -11,9 +11,11 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IntroComponent } from './pages/intro/intro.component';
+import { SentComponent } from './pages/contact/sent/sent.component';
 
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http'
     HomeComponent,
     ContactComponent,
     AboutComponent,
-    IntroComponent
+    IntroComponent,
+    SentComponent
   ],
   imports: [
     BrowserModule,
