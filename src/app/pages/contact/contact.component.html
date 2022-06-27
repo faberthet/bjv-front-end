@@ -18,23 +18,26 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPrenom">Prénom</label>
-                    <input type="text" class="form-control" id="inputPrenom" placeholder="Prénom" name="prenom" [(ngModel)]="user.prenom">
+                    <input required type="text" class="form-control" id="inputPrenom" #prenom="ngModel" placeholder="Prénom" name="prenom" [(ngModel)]="user.prenom">
+                    <div class="alert alert-danger" *ngIf="prenom.touched && prenom.errors?.['required']">Prenom requis</div>
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email" [(ngModel)]="user.email">
+                    <label for="inputEmail">Email</label>
+                    <input required type="email" class="form-control" id="inputEmail" #email="ngModel" placeholder="Email" name="email" [(ngModel)]="user.email">
+                    <div class="alert alert-danger" *ngIf="email.touched && email.errors?.['required']">Email requis</div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputSociete">Société</label>
-                    <input type="text" class="form-control" id="inputSociete" placeholder="Société" name="societe" [(ngModel)]="user.societe">
+                    <input type="text" class="form-control" id="inputSociete" #societe="ngModel" placeholder="Société" name="societe" [(ngModel)]="user.societe">
                 </div>
             </div>
             <div class="row">
-                <label for="exampleFormControlTextarea1">Message</label>
+                <label for="message">Message</label>
                 <div class="col-md-12">    
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Votre Message" name="message" [(ngModel)]="user.message"></textarea>
+                    <textarea required class="form-control" id="message" #message="ngModel" rows="3" placeholder="Votre Message" name="message" [(ngModel)]="user.message"></textarea>
+                    <div class="alert alert-danger" *ngIf="message.touched && message.errors?.['required']">Message requis</div>
                 </div>
             </div>
             <div class="buttonForm">

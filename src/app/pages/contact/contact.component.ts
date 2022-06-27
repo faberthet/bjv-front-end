@@ -21,13 +21,15 @@ export class ContactComponent implements OnInit {
 
   public state:string="not-submitted";
   public buttonState:string="button-not-submitted";
+  y:any;
 
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
   }
   onSubmit(x:any){
-    console.log(x.form.valid);
+    console.log(x.form.controls.nom.touched);
+    ;
     if(x.form.valid){
       this.state="submitted";
       this.buttonState="button-submitted";
@@ -38,6 +40,11 @@ export class ContactComponent implements OnInit {
         next: res => this.router.navigate(['/contact/sent'])
       });
     }
+    x.form.controls.nom.touched=true
+    x.form.controls.prenom.touched=true
+    x.form.controls.email.touched=true
+    x.form.controls.message.touched=true
+    x.form.controls.societe.touched=true
   return null;
  }
 
