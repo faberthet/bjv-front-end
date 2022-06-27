@@ -26,21 +26,19 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // onSubmit(): Observable<contactUser>{
-  //   console.log(this.user);
-  //   return this.http.post<contactUser>("http://localhost:8080/", this.user);
-  // }
-  onSubmit(){
-    this.state="submitted";
-    this.buttonState="button-submitted";
-    console.log(this.user);
-    const json = JSON.stringify(this.user)
-    console.log(json);
-    return this.http.post(this.url, this.user).subscribe({
-      error: error => console.log(error),
-      next: res => this.router.navigate(['/contact/sent'])
+  onSubmit(x:any){
+    console.log(x.form.valid);
+    if(x.form.valid){
+      this.state="submitted";
+      this.buttonState="button-submitted";
+      const json = JSON.stringify(this.user)
+      console.log(json);
+      return this.http.post(this.url, this.user).subscribe({
+        error: error => console.log(error),
+        next: res => this.router.navigate(['/contact/sent'])
+      });
     }
-  );
-    //this.router.navigate(['/contact/sent'])
-  }
+  return null;
+ }
+
 }

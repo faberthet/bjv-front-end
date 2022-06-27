@@ -9,11 +9,12 @@
             </div>  -->
         </div>
         <hr>
-        <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="inputNom">Nom</label>
-                    <input type="text" class="form-control" id="inputNom" placeholder="Nom" name="nom" [(ngModel)]="user.nom">
+                    <input required type="text" class="form-control" id="inputNom" #nom="ngModel" placeholder="Nom" name="nom" [(ngModel)]="user.nom">
+                    <div class="alert alert-danger" *ngIf="nom.touched && nom.errors?.['required']">Nom requis</div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPrenom">Prénom</label>
@@ -37,7 +38,7 @@
                 </div>
             </div>
             <div class="buttonForm">
-                <button type="submit" class="btn btn-primary" [class]="buttonState">Envoyez</button>
+                <button type="submit" class="btn btn-primary" [class]="buttonState">Envoyez</button>  <!--[disabled]="!contactForm.valid"-->
                 <div [class]="state">Envoi en cours...</div>
             </div>
         </form>
