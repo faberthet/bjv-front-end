@@ -13,8 +13,11 @@
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="inputNom">Nom</label>
-                    <input required type="text" class="form-control" id="inputNom" #nom="ngModel" placeholder="Nom" name="nom" [(ngModel)]="user.nom">
-                    <div class="alert alert-danger" *ngIf="nom.touched && nom.errors?.['required']">Nom requis</div>
+                    <input required pattern="[a-zA-Z]+" type="text" class="form-control" id="inputNom" #nom="ngModel" placeholder="Nom" name="nom" [(ngModel)]="user.nom">
+                    <div class="alert alert-danger" *ngIf="nom.touched && !nom.valid">
+                        <div *ngIf="nom.errors?.['required']">Nom requis</div>
+                        <!--<div *ngIf="nom.errors?.['pattern']">Lettres uniquement</div>-->
+                    </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPrenom">Prénom</label>
@@ -25,8 +28,12 @@
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail">Email</label>
-                    <input required type="email" class="form-control" id="inputEmail" #email="ngModel" placeholder="Email" name="email" [(ngModel)]="user.email">
-                    <div class="alert alert-danger" *ngIf="email.touched && email.errors?.['required']">Email requis</div>
+                    <input required pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" type="email" class="form-control" id="inputEmail" #email="ngModel" placeholder="Email" name="email" [(ngModel)]="user.email">
+                    <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                        <div *ngIf="email.errors?.['required']">Email requis</div>
+                        <div *ngIf="email.errors?.['pattern']">Format de l'email invalide</div>
+                    </div>
+
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputSociete">Société</label>
@@ -35,7 +42,7 @@
             </div>
             <div class="row">
                 <label for="message">Message</label>
-                <div class="col-md-12">    
+                <div class="form-group col-md-12">    
                     <textarea required class="form-control" id="message" #message="ngModel" rows="3" placeholder="Votre Message" name="message" [(ngModel)]="user.message"></textarea>
                     <div class="alert alert-danger" *ngIf="message.touched && message.errors?.['required']">Message requis</div>
                 </div>
