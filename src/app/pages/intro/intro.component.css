@@ -1,6 +1,7 @@
     
     .texte1{
         padding: 60px;
+        padding-top: 30px;
         /* background-color: rgb(227, 248, 225); */
         background-color: darkseagreen;
         position: absolute;
@@ -12,6 +13,7 @@
         border-radius: 10px;
         font-family: sans-serif;
      }
+
      .button>.btn{
         position:absolute;
         bottom: -2rem;
