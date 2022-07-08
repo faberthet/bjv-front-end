@@ -1,5 +1,5 @@
 
-main{
+.main1{
 
     width: 85%;
     max-width: 1320px;
@@ -20,27 +20,27 @@ main{
     }
 
  @media only screen and (max-width: 1402px) {
-     main{
+     .main1{
        height: 550px;
     } 
  }
  
  @media only screen and (max-width: 1270px) {
-      main{
+      .main1{
        width: 92%;
        height: 525px; 
     } 
  } 
  
  @media only screen and (max-width: 1160px) {
-     main{
+     .main1{
        width: 95%;
        height: 500px; 
     } 
  }
  
  @media only screen and (max-width: 1050px) {
-    main{
+    .main1{
       height: 450px;
       margin: 75px auto;
     }  
@@ -48,7 +48,7 @@ main{
  } 
  
   @media only screen and (max-width: 991px) {
-     main{
+     .main1{
        position:static;
        height: auto;
        text-align: center;
