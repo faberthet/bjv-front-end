@@ -16,6 +16,15 @@ import { SentComponent } from './pages/contact/sent/sent.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ArticlesComponent } from './articles/articles.component';
+import { ArticleComponent } from './articles/article/article.component';
+import { ArticleNavbarComponent } from './articles/article-navbar/article-navbar.component';
+
+import { ArticlesAdminComponent } from './admin/articles-admin/articles-admin.component';
+import { CreateArticleComponent } from './admin/articles-admin/create-article/create-article.component';
+import { UpdateArticleComponent } from './admin/articles-admin/update-article/update-article.component';
+import { ArticleViewComponent } from './admin/articles-admin/article-view/article-view.component';
+
 
 
 @NgModule({
@@ -28,7 +37,15 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     AboutComponent,
     IntroComponent,
-    SentComponent
+    SentComponent,
+    ArticlesComponent,
+    ArticleComponent,
+    ArticleNavbarComponent,
+    ArticlesAdminComponent,
+    CreateArticleComponent,
+    UpdateArticleComponent,
+    ArticleViewComponent,
+
   ],
   imports: [
     BrowserModule,

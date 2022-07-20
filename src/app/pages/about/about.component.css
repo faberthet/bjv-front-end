@@ -43,13 +43,6 @@
    height: 1px;
 }
 
-
- @media only screen and (max-width: 1515px) {
-    .about{
-      /* left:0; */
-   } 
- }
-
  @media only screen and (max-width: 1160px) {
    .mainabout{
      width: 95%;
@@ -74,9 +67,4 @@
       height: auto;
       width: 75%;
    }
- }
- @media only screen and (max-width: 991px) {
-    /* .about{
-       padding: 20px;
-    } */
  }
