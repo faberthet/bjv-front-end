@@ -1,1 +1,19 @@
-<p>articles-admin works!</p>
+<div class="bgwhite">
+    
+<h2>Gestion des articles</h2>
+<a class="nav-link text-uppercase" routerLink="/admin/articles/create">créer un article</a>
+<table class="table">
+    <thead>
+        <th>titre</th>
+        <th>theme</th>
+        <th>contenu</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let article of articles">
+            <td> {{ article.titre }}</td>
+            <td> {{ article.theme }}</td>
+            <td> {{ article.content }}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

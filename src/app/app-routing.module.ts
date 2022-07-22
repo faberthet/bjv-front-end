@@ -5,6 +5,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { IntroComponent } from './pages/intro/intro.component';
 import { SentComponent } from './pages/contact/sent/sent.component';
+import { ArticlesAdminComponent } from './admin/articles-admin/articles-admin.component';
+import { CreateArticleComponent } from './admin/articles-admin/create-article/create-article.component';
 
 
 const routes: Routes = [
@@ -15,7 +17,10 @@ const routes: Routes = [
   // {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'contact/sent', component: SentComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
+  {path: 'admin/articles', component: ArticlesAdminComponent},
+  {path: 'admin/articles/create', component: CreateArticleComponent}
+
 ];
 
 @NgModule({

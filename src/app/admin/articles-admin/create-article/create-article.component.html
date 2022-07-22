@@ -1,1 +1,18 @@
 <p>create-article works!</p>
+<div class="container bg-light">
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group mb-3">
+      <label for="titre" class="form-label">Titre</label>
+      <input [(ngModel)]="article.titre" type="text" class="form-control" id="titre" name="titre">
+    </div>
+    <div class="form-group mb-3">
+      <label for="theme" class="form-label">Theme</label>
+      <input [(ngModel)]="article.theme" type="text" class="form-control" id="theme" name="theme">
+    </div>
+    <div class="form-group mb-3">
+        <label for="content" class="form-label">Contenu</label>
+        <input [(ngModel)]="article.content" type="text" class="form-control" id="content" name="content">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
