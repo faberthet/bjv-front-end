@@ -19,4 +19,13 @@ export class ArticlesService {
   addArticle(article: Article): Observable<Object>{
     return this.http.post(this.baseUrl,article);
   }
+  getArticleById(id: number): Observable<Article>{
+    return this.http.get<Article>(this.baseUrl + `/${id}`)
+  }
+  updateArticle(id:number, article: Article): Observable<Object>{
+    return this.http.put(this.baseUrl + `/${id}`, article)
+  }
+  deleteArticle(id:number): Observable<Object>{
+    return this.http.delete(this.baseUrl + `/${id}`)
+  }
 }

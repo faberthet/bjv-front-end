@@ -13,6 +13,15 @@
             <td> {{ article.titre }}</td>
             <td> {{ article.theme }}</td>
             <td> {{ article.content }}</td>
+            <td> 
+                <button (click)="updateArticle(article.id)" class="btn btn-info">modifier</button>
+            </td>
+            <td> 
+                <button (click)="deleteArticle(article.id)" class="btn btn-danger">supprimer</button>
+            </td>
+            <td> 
+                <button (click)="articleView(article.id)" class="btn btn-info">afficher</button>
+            </td>
         </tr>
     </tbody>
 </table>
