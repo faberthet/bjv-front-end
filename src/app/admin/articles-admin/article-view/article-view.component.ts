@@ -3,6 +3,7 @@ import { Article } from 'src/app/models/article';
 import { ActivatedRoute} from '@angular/router';
 import { ArticlesService } from 'src/app/services/articles.service';
 
+
 @Component({
   selector: 'app-article-view',
   templateUrl: './article-view.component.html',
@@ -10,19 +11,19 @@ import { ArticlesService } from 'src/app/services/articles.service';
 })
 export class ArticleViewComponent implements OnInit {
   id: number
-  article: Article
-
+  article: Article = new Article();
 
   constructor(private route: ActivatedRoute,private articleService: ArticlesService) { }
 
   ngOnInit(): void {
+    
     this.id=this.route.snapshot.params['id']
 
-    this.article = new Article();
     this.articleService.getArticleById(this.id).subscribe({
       error: error => console.log(error),
-      next: res => this.article=res
+      next: res => this.article=res,
     })
+
   }
 
 }

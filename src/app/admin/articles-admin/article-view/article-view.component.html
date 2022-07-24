@@ -3,5 +3,5 @@
     <div><span>Titre:</span> {{article.titre}}</div>
     <div><span>Theme:</span> {{article.theme}}</div>
     <br>
-    <div><span>content:</span> {{article.content}}</div>
+    <div><span>content:</span> <div [innerHtml]="article.content"></div></div>
 </div>

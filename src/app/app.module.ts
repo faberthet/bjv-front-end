@@ -25,6 +25,8 @@ import { CreateArticleComponent } from './admin/articles-admin/create-article/cr
 import { UpdateArticleComponent } from './admin/articles-admin/update-article/update-article.component';
 import { ArticleViewComponent } from './admin/articles-admin/article-view/article-view.component';
 
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+
 
 
 @NgModule({
@@ -52,7 +54,8 @@ import { ArticleViewComponent } from './admin/articles-admin/article-view/articl
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
