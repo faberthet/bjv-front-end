@@ -15,7 +15,7 @@ export class UpdateArticleComponent implements OnInit {
   id: number;
   public Editor = CustomEditor;
   public config={
-    toolbar: {
+  	toolbar: {
       items: [
         'heading',
         '|',
@@ -28,20 +28,21 @@ export class UpdateArticleComponent implements OnInit {
         'outdent',
         'indent',
         '|',
-        'alignment',
-        'underline',
+        'imageUpload',
         'blockQuote',
         'insertTable',
         'mediaEmbed',
         'undo',
         'redo',
-        'imageInsert',
-        'fontColor',
         'fontBackgroundColor',
+        'fontColor',
         'fontFamily',
         'fontSize',
-        'horizontalLine',
-        'specialCharacters'
+        'highlight',
+        'imageInsert',
+        'specialCharacters',
+        'todoList',
+        'underline'
       ]
     },
     language: 'fr',
@@ -51,8 +52,7 @@ export class UpdateArticleComponent implements OnInit {
         'imageStyle:inline',
         'imageStyle:block',
         'imageStyle:side',
-        'linkImage',
-        'toggleImageCaption'
+        'linkImage'
       ]
     },
     table: {
@@ -60,9 +60,25 @@ export class UpdateArticleComponent implements OnInit {
         'tableColumn',
         'tableRow',
         'mergeTableCells',
-        'tableCellProperties'
+        'tableCellProperties',
+        'tableProperties'
       ]
-    }
+    },
+    simpleUpload: {
+      // The URL that the images are uploaded to.
+      uploadUrl: 'http://localhost:8080/upl',
+
+      // // Enable the XMLHttpRequest.withCredentials property.
+      // withCredentials: true,
+
+      // // Headers sent along with the XMLHttpRequest to the upload server.
+      // headers: {
+      //     'X-CSRF-TOKEN': 'CSRF-Token',
+      //     Authorization: 'Bearer <JSON Web Token>',
+      //     Access-Control-Allow-Credentials: true
+      // }
+  }
+   
   }
 
   constructor(private articleService: ArticlesService,private router: Router, private route: ActivatedRoute) { }
