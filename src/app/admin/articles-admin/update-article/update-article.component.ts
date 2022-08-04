@@ -12,8 +12,33 @@ import * as CustomEditor from 'ckeditor5-custom-build/build/ckeditor'
 export class UpdateArticleComponent implements OnInit {
 
   article: Article = new Article();
-  id: number;
+  private id: number=this.route.snapshot.params['id']
   public Editor = CustomEditor;
+
+
+  constructor(private articleService: ArticlesService,private router: Router, private route: ActivatedRoute) {
+    
+   }
+
+  ngOnInit(): void {
+    //pour éviter message d'erreur ckeditor dans console car undefined
+    this.article.content=""
+
+    //this.id= this.route.snapshot.params['id'];
+    this.articleService.getArticleById(this.id).subscribe({
+      error: error => console.log(error),
+      next: res => this.article=res
+    })
+  }
+
+
+  onSubmit(){
+    this.articleService.updateArticle(this.id,this.article).subscribe({
+      error: error => console.log(error),
+      next: res => this.router.navigate(['/admin/articles'])
+    });
+  }
+
   public config={
   	toolbar: {
       items: [
@@ -72,34 +97,14 @@ export class UpdateArticleComponent implements OnInit {
       // withCredentials: true,
 
       // // Headers sent along with the XMLHttpRequest to the upload server.
-      // headers: {
+      headers: {
+        'Image-Folder' : this.id
       //     'X-CSRF-TOKEN': 'CSRF-Token',
       //     Authorization: 'Bearer <JSON Web Token>',
       //     Access-Control-Allow-Credentials: true
-      // }
+      }
   }
    
-  }
-
-  constructor(private articleService: ArticlesService,private router: Router, private route: ActivatedRoute) { }
-
-  ngOnInit(): void {
-    //pour éviter message d'erreur ckeditor dans console car undefined
-    this.article.content=""
-
-    this.id= this.route.snapshot.params['id'];
-    this.articleService.getArticleById(this.id).subscribe({
-      error: error => console.log(error),
-      next: res => this.article=res
-    })
-  }
-
-
-  onSubmit(){
-    this.articleService.updateArticle(this.id,this.article).subscribe({
-      error: error => console.log(error),
-      next: res => this.router.navigate(['/admin/articles'])
-    });
   }
 
 }

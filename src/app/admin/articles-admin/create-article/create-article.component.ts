@@ -85,7 +85,6 @@ export class CreateArticleComponent implements OnInit {
   constructor(private articleService: ArticlesService,private router: Router) { }
 
   ngOnInit(): void {
-    //pour éviter message d'erreur ckeditor dans console car undefined
     this.article.content=""
   }
 

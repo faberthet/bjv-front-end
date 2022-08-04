@@ -9,11 +9,6 @@
       <label for="theme" class="form-label">Theme</label>
       <input [(ngModel)]="article.theme" type="text" class="form-control" id="theme" name="theme">
     </div>
-    <div class="form-group mb-3">
-        <label for="content" class="form-label">Contenu</label>
-        <!-- <input [(ngModel)]="article.content" type="text" class="form-control" id="content" name="content"> -->
-        <ckeditor [(ngModel)]="article.content" [config]="config" name="content" id="content" [editor]="Editor"></ckeditor>
-      </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 
