@@ -14,6 +14,25 @@ export class CreateArticleComponent implements OnInit {
 
   article: Article = new Article();
   
+ 
+  constructor(private articleService: ArticlesService,private router: Router) { }
+
+  ngOnInit(): void {
+    this.article.content=""
+    this.article.actif=false
+  }
+
+  saveArticle(){
+    this.articleService.addArticle(this.article).subscribe({
+      error: error => console.log(error),
+      next: res => this.router.navigate(['/admin/articles'])
+    })
+  }
+
+  onSubmit(){
+    this.saveArticle();
+  }
+
   public Editor = CustomEditor;
   public config={
   	toolbar: {
@@ -64,39 +83,7 @@ export class CreateArticleComponent implements OnInit {
         'tableCellProperties',
         'tableProperties'
       ]
-    },
-    simpleUpload: {
-      // The URL that the images are uploaded to.
-      uploadUrl: 'http://localhost:8080/upl',
-
-      // // Enable the XMLHttpRequest.withCredentials property.
-      // withCredentials: true,
-
-      // // Headers sent along with the XMLHttpRequest to the upload server.
-      // headers: {
-      //     'X-CSRF-TOKEN': 'CSRF-Token',
-      //     Authorization: 'Bearer <JSON Web Token>',
-      //     Access-Control-Allow-Credentials: true
-      // }
-  }
-   
-  }
-
-  constructor(private articleService: ArticlesService,private router: Router) { }
-
-  ngOnInit(): void {
-    this.article.content=""
-  }
-
-  saveArticle(){
-    this.articleService.addArticle(this.article).subscribe({
-      error: error => console.log(error),
-      next: res => this.router.navigate(['/admin/articles'])
-    })
-  }
-
-  onSubmit(){
-    this.saveArticle();
+    }
   }
 
 }

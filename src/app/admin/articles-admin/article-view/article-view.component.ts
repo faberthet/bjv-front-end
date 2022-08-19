@@ -20,17 +20,12 @@ export class ArticleViewComponent implements OnInit {
     
     this.id=this.route.snapshot.params['id']
 
-    //Promise.resolve( // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/await
     this.articleService.getArticleById(this.id).subscribe({
       error: error => console.log(error),
-      next: res => this.article=res,
-    })//).then()
-    setTimeout (() => {//trouver une solution pour effectuer cette action après this.article=res
-     // var rp=this.article.content.replace("<img src", "<img [src]");
-      this.trustedContent=this.sanitized.bypassSecurityTrustHtml(this.article.content);
-     }, 5000);
-    //this.trustedContent=this.sanitized.bypassSecurityTrustHtml(this.article.content);
+      next: res =>  [this.article=res, this.trustedContent=this.sanitized.bypassSecurityTrustHtml(this.article.content)]
+    })
 
   }
+  //Promise.resolve( // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/await
 
 }

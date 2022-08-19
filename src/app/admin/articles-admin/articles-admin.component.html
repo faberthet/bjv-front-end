@@ -2,6 +2,7 @@
     
 <h2>Gestion des articles</h2>
 <a class="nav-link text-uppercase" routerLink="/admin/articles/create">créer un article</a>
+<h3>articles actif</h3>
 <table class="table">
     <thead>
         <th>titre</th>
@@ -9,7 +10,8 @@
         <th>contenu</th>
     </thead>
     <tbody>
-        <tr *ngFor="let article of articles">
+        <ng-container *ngFor="let article of articles">
+        <tr *ngIf="article.actif">
             <td> {{ article.titre }}</td>
             <td> {{ article.theme }}</td>
             <td> {{ article.content }}</td>
@@ -22,7 +24,49 @@
             <td> 
                 <button (click)="articleView(article.id)" class="btn btn-info">afficher</button>
             </td>
+            <td> 
+                <button (click)="deactivate(article.id)" class="btn btn-danger">désactiver</button>
+            </td>
         </tr>
+    </ng-container>
+
     </tbody>
 </table>
+<h3>articles inactif</h3>
+<table class="table">
+    <thead>
+        <th>titre</th>
+        <th>theme</th>
+        <th>contenu</th>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let article of articles">
+        <tr *ngIf="!article.actif">
+            <td> {{ article.titre }}</td>
+            <td> {{ article.theme }}</td>
+            <td> {{ article.content }}</td>
+            <td> 
+                <button (click)="updateArticle(article.id)" class="btn btn-info">modifier</button>
+            </td>
+            <td> 
+                <button (click)="deleteArticle(article.id)" class="btn btn-danger">supprimer</button>
+            </td>
+            <td> 
+                <button (click)="articleView(article.id)" class="btn btn-info">afficher</button>
+            </td>
+            <td> 
+                <button (click)="activate(article.id)" class="btn btn-danger">activer</button>
+            </td>
+        </tr>
+    </ng-container>
+
+    </tbody>
+</table>
+
+
+
+
+<div *ngFor="let article of articles">
+
+</div>
 </div>

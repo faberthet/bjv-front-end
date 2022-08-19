@@ -40,5 +40,17 @@ export class ArticlesAdminComponent implements OnInit {
     this.router.navigate(['admin/articles/details', id])
   }
 
+  activate(id: number){
+    this.articleService.activateArticle(id).subscribe(
+      data => { console.log(data);
+        this.getArticles();
+      })
+  }
 
+  deactivate(id: number){
+    this.articleService.deactivateArticle(id).subscribe(
+      data => { console.log(data);this.getArticles();
+      
+    })
+  }
 }

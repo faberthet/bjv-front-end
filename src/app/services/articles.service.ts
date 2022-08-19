@@ -28,4 +28,11 @@ export class ArticlesService {
   deleteArticle(id:number): Observable<Object>{
     return this.http.delete(this.baseUrl + `/${id}`)
   }
+  activateArticle(id: number): Observable<Object>{
+    return this.http.put(this.baseUrl + "/activate" + `/${id}`,"")
+  }
+  deactivateArticle(id: number): Observable<Object>{
+    return this.http.put(this.baseUrl + "/deactivate" + `/${id}`,"")
+  }
+
 }

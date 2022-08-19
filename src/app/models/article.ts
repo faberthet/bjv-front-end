@@ -3,4 +3,5 @@ export class Article {
     titre: string;
     theme: string;
     content: string;
+    actif: boolean;
 }
