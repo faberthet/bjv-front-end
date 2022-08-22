@@ -26,6 +26,8 @@ import { UpdateArticleComponent } from './admin/articles-admin/update-article/up
 import { ArticleViewComponent } from './admin/articles-admin/article-view/article-view.component';
 
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -47,6 +49,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     CreateArticleComponent,
     UpdateArticleComponent,
     ArticleViewComponent,
+    LoginComponent,
+    LogoutComponent,
 
   ],
   imports: [

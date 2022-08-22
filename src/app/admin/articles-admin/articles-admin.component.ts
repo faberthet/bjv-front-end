@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Article } from 'src/app/models/article';
 import { ArticlesService } from 'src/app/services/articles.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-articles-admin',
@@ -11,11 +12,13 @@ import { ArticlesService } from 'src/app/services/articles.service';
 export class ArticlesAdminComponent implements OnInit {
 
   articles: Article[];
+  isLoggedIn:any;
 
-  constructor(private articleService: ArticlesService, private router: Router) { }
+  constructor(private articleService: ArticlesService, private router: Router, private authservices:AuthenticationService) { }
 
   ngOnInit(): void {
     this.getArticles();
+    this.isLoggedIn=this.authservices.isUserLoggedIn;
   }
 
   private getArticles(){
@@ -52,5 +55,9 @@ export class ArticlesAdminComponent implements OnInit {
       data => { console.log(data);this.getArticles();
       
     })
+  }
+
+  logout(){
+    this.authservices.logOut
   }
 }

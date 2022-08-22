@@ -1,6 +1,6 @@
 <div class="bgwhite">
     
-<h2>Gestion des articles</h2>
+<h2>Gestion des articles</h2><button><a *ngIf="isLoggedIn" routerLink="/logout" class="nav-link">LogOut</a></button>
 <a class="nav-link text-uppercase" routerLink="/admin/articles/create">créer un article</a>
 <h3>articles actif</h3>
 <table class="table">

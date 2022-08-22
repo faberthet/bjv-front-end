@@ -9,7 +9,9 @@ import { ArticlesAdminComponent } from './admin/articles-admin/articles-admin.co
 import { CreateArticleComponent } from './admin/articles-admin/create-article/create-article.component';
 import { UpdateArticleComponent } from './admin/articles-admin/update-article/update-article.component';
 import { ArticleViewComponent } from './admin/articles-admin/article-view/article-view.component';
-
+import { LoginComponent } from './login/login.component';
+import { AuthGuardService } from './services/auth-guard.service';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent,
@@ -20,10 +22,12 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'contact/sent', component: SentComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'admin/articles', component: ArticlesAdminComponent},
-  {path: 'admin/articles/create', component: CreateArticleComponent},
-  {path: 'admin/articles/update/:id', component: UpdateArticleComponent},
-  {path: 'admin/articles/details/:id', component: ArticleViewComponent}
+  {path: 'admin/articles', component: ArticlesAdminComponent, canActivate:[AuthGuardService]},
+  {path: 'admin/articles/create', component: CreateArticleComponent, canActivate:[AuthGuardService]},
+  {path: 'admin/articles/update/:id', component: UpdateArticleComponent, canActivate:[AuthGuardService]},
+  {path: 'admin/articles/details/:id', component: ArticleViewComponent, canActivate:[AuthGuardService]},
+  {path: 'login', component: LoginComponent},
+  {path: 'logout', component: LogoutComponent}
 ];
 
 @NgModule({
