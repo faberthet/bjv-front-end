@@ -12,6 +12,7 @@ import { ArticleViewComponent } from './admin/articles-admin/article-view/articl
 import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { LogoutComponent } from './logout/logout.component';
+import { ArticlesComponent } from './articles/articles.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent,
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path: 'admin/articles/update/:id', component: UpdateArticleComponent, canActivate:[AuthGuardService]},
   {path: 'admin/articles/details/:id', component: ArticleViewComponent, canActivate:[AuthGuardService]},
   {path: 'login', component: LoginComponent},
-  {path: 'logout', component: LogoutComponent}
+  {path: 'logout', component: LogoutComponent},
+  {path: 'articles', component: ArticlesComponent},
 ];
 
 @NgModule({

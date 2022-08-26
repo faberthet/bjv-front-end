@@ -28,8 +28,9 @@ import { ArticleViewComponent } from './admin/articles-admin/article-view/articl
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+//import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { LogoutComponent } from './logout/logout.component';
     ArticleViewComponent,
     LoginComponent,
     LogoutComponent,
+    
 
   ],
   imports: [
@@ -59,7 +61,10 @@ import { LogoutComponent } from './logout/logout.component';
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
-    CKEditorModule
+    CKEditorModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+   // LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
