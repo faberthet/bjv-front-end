@@ -1,8 +1,12 @@
-<div class="test15">une div <fa-icon [icon]="faBars"></fa-icon></div>
+<div class="container">
+<div class="test15">
+    une div 
+    <fa-icon [icon]="faBars" *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()"></fa-icon>
+</div>
 
 
 <mat-sidenav-container>
-    <mat-sidenav mode="over">
+    <mat-sidenav #sidenav="matSidenav">
         <ul>
             <li>item</li>
             <li>item</li>
@@ -15,4 +19,4 @@
         </div> 
     </mat-sidenav-content>
 </mat-sidenav-container>
-
+</div>
