@@ -4,10 +4,10 @@ height: 500px;
 
 }
 mat-sidenav{
-padding: 1rem;
-width: 250px;
-background-color: dodgerblue;
-}
+    padding: 1rem;
+    width: 250px;
+    background-color: dodgerblue;
+    }
 mat-sidenav-content{
     height: 500px;
     padding: 1rem;

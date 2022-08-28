@@ -3,15 +3,9 @@
     une div 
     <fa-icon [icon]="faBars" *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()"></fa-icon>
 </div>
-
-
 <mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav">
-        <ul>
-            <li>item</li>
-            <li>item</li>
-            <li>item</li>
-        </ul>
+        <app-article-navbar></app-article-navbar>
     </mat-sidenav>
     <mat-sidenav-content>
         <div class="content">
@@ -20,3 +14,8 @@
     </mat-sidenav-content>
 </mat-sidenav-container>
 </div>
+<!-- <li>Végétaux d'ornement</li>
+<li>Ecojardin</li>
+<li>Botanique</li>
+<li>Permaculture</li>
+<li>Biodiversité domestique et sauvage</li> -->

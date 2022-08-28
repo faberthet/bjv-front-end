@@ -14,12 +14,12 @@ export class CreateArticleComponent implements OnInit {
 
   article: Article = new Article();
   
- 
   constructor(private articleService: ArticlesService,private router: Router) { }
 
   ngOnInit(): void {
-    this.article.content=""
+    //this.article.content=""
     this.article.actif=false
+    this.article.theme="ornement"
   }
 
   saveArticle(){

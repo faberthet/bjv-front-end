@@ -7,7 +7,15 @@
     </div>
     <div class="form-group mb-3">
       <label for="theme" class="form-label">Theme</label>
-      <input [(ngModel)]="article.theme" type="text" class="form-control" id="theme" name="theme">
+      <select [(ngModel)]="article.theme"  name="theme" id="theme" class="form-select" > 
+        
+        <!-- <option value="choix" disabled>choisir un thème</option> -->
+        <option value="ornement">Végétaux d'ornement</option>
+        <option value="ecojardin">Écojardin</option>
+        <option value="botanique">Botanique</option>
+        <option value="permaculture">Permaculture</option>
+        <option value="biodiversite">Biodiversité domestique et sauvage</option>
+    </select>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

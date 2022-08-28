@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-article-navbar',
   templateUrl: './article-navbar.component.html',
@@ -10,6 +11,7 @@ export class ArticleNavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+   
   }
 
 }
