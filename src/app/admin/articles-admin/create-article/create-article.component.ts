@@ -17,7 +17,7 @@ export class CreateArticleComponent implements OnInit {
   constructor(private articleService: ArticlesService,private router: Router) { }
 
   ngOnInit(): void {
-    //this.article.content=""
+    this.article.content="" //error backend lors de updatearticle si null... 
     this.article.actif=false
     this.article.theme="ornement"
   }
@@ -29,8 +29,12 @@ export class CreateArticleComponent implements OnInit {
     })
   }
 
-  onSubmit(){
-    this.saveArticle();
+  onSubmit(x:any){
+    if(x.form.valid){
+      this.saveArticle();
+    }
+    x.form.controls.titre.touched=true
+    x.form.controls.theme.touched=true
   }
 
   public Editor = CustomEditor;

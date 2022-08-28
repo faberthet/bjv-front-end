@@ -1,13 +1,26 @@
 <p>update-article works!</p>
 <div class="container bg-light">
-    <form (ngSubmit)="onSubmit()">
+    <form #updateArticleForm="ngForm" (ngSubmit)="onSubmit(updateArticleForm)">
         <div class="form-group mb-3">
           <label for="titre" class="form-label">Titre</label>
-          <input [(ngModel)]="article.titre" type="text" class="form-control" id="titre" name="titre">
+          <input required [(ngModel)]="article.titre" type="text" class="form-control" id="titre" name="titre" #titre="ngModel">
+          <div class="alert alert-danger" *ngIf="titre.touched && !titre.valid">
+            <div *ngIf="titre.errors?.['required']">Titre requis</div>
+          </div>
         </div>
         <div class="form-group mb-3">
           <label for="theme" class="form-label">Theme</label>
-          <input [(ngModel)]="article.theme" type="text" class="form-control" id="theme" name="theme">
+          <!-- <input [(ngModel)]="article.theme" type="text" class="form-control" id="theme" name="theme"> -->
+          <select required [(ngModel)]="article.theme"  name="theme" id="theme" class="form-select" #theme="ngModel"> 
+            <option value="ornement">Végétaux d'ornement</option>
+            <option value="ecojardin">Écojardin</option>
+            <option value="botanique">Botanique</option>
+            <option value="permaculture">Permaculture</option>
+            <option value="biodiversite">Biodiversité domestique et sauvage</option>
+        </select>
+        <div class="alert alert-danger" *ngIf="theme.touched && !theme.valid">
+          <div *ngIf="theme.errors?.['required']">Thème requis</div>
+        </div>
         </div>
         <div class="form-group mb-3">
             <label for="content" class="form-label">Contenu</label>
