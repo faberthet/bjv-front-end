@@ -11,9 +11,6 @@ import { AuthenticationService } from '../services/authentication.service';
 export class LoginComponent implements OnInit {
 
   user:Admin =new Admin();
-  // username:string 
-  // password:string 
-  // invalidLogin = false
 
   constructor(private router: Router,
     private loginservice: AuthenticationService) { }
@@ -21,20 +18,11 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  // checkLogin() {
-  //   if (this.loginservice.authenticate(this.username, this.password)
-  //   ) {
-  //     this.router.navigate(["admin/articles"])
-  //     this.invalidLogin = false
-  //   } else
-  //     this.invalidLogin = true
-  // }
   checkLogin() {
     this.loginservice.CheckIdentity(this.user).subscribe({
       error: error => console.log(error),
-      next: res => [console.log(res),this.loginservice.authenticate(this.user,res), this.router.navigate(['/admin/articles'])]
+      next: res => [console.log(res),this.loginservice.authenticate(this.user), this.router.navigate(['/admin/articles'])]
     })
   }
-  
 
 }
