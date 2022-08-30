@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Article } from 'src/app/models/article';
+import { ArticleWithoutContent } from '../models/article-without-content';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,10 @@ export class ArticlesService {
 
   getArticles(): Observable<Article[]>{
     return this.http.get<Article[]>(this.baseUrl)
+  }
+
+  getArticlesWithoutContent(): Observable<ArticleWithoutContent[]>{
+    return this.http.get<ArticleWithoutContent[]>(this.baseUrl + "/dto")
   }
 
   addArticle(article: Article): Observable<Object>{

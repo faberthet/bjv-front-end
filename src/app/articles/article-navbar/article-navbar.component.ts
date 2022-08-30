@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Article } from 'src/app/models/article';
 import { ArticlesService } from 'src/app/services/articles.service';
 import { Router } from '@angular/router';
+import { ArticleWithoutContent } from 'src/app/models/article-without-content';
 
 @Component({
   selector: 'app-article-navbar',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ArticleNavbarComponent implements OnInit {
 
-  articles: Article[];
+  articles: ArticleWithoutContent[];
 
   constructor(private articleService: ArticlesService, private router: Router) { }
 
@@ -18,8 +19,8 @@ export class ArticleNavbarComponent implements OnInit {
     this.getArticles();
   }
 
-  private getArticles(){ //à faire dans articleService: creer un "getwithoutcontent" pour charger seulement titre theme id pour la navbar...
-    this.articleService.getArticles().subscribe( data => {
+  private getArticles(){ 
+    this.articleService.getArticlesWithoutContent().subscribe( data => {
       this.articles=data;
     })
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Article } from 'src/app/models/article';
+import { ArticleWithoutContent } from 'src/app/models/article-without-content';
 import { ArticlesService } from 'src/app/services/articles.service';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
@@ -11,18 +12,18 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class ArticlesAdminComponent implements OnInit {
 
-  articles: Article[];
-  isLoggedIn:any;
+  articles: ArticleWithoutContent[];
+  isLoggedIn:any;//??
 
   constructor(private articleService: ArticlesService, private router: Router, private authservices:AuthenticationService) { }
 
   ngOnInit(): void {
     this.getArticles();
-    this.isLoggedIn=this.authservices.isUserLoggedIn;
+    this.isLoggedIn=this.authservices.isUserLoggedIn;//??
   }
 
   private getArticles(){
-    this.articleService.getArticles().subscribe( data => {
+    this.articleService.getArticlesWithoutContent().subscribe( data => {
       this.articles=data;
     })
 
