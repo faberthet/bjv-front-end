@@ -6,10 +6,13 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
 
-    <ul>
-        <li>item</li>
-        <li>item</li>
-        <li>item</li>  
+    <ul *ngFor="let article of articles">
+      <ng-container *ngIf='article.theme==="ornement"'>
+        <ng-container *ngIf='article.actif'>
+        <li><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></li>
+        <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
+        </ng-container>
+      </ng-container>
     </ul> 
   </mat-expansion-panel>
 

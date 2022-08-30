@@ -9,7 +9,14 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <div class="content">
-            main content
+            <div class="bg-light">
+                <ng-container *ngIf="article.id!=1">
+                    <div><span>Titre:</span> {{article.titre}}</div>
+                    <div><span>Theme:</span> {{article.theme}}</div>
+                </ng-container>
+                <br>
+                <div><span>content:</span> <div [innerHtml]="trustedContent"></div></div>
+            </div>
         </div> 
     </mat-sidenav-content>
 </mat-sidenav-container>
