@@ -1,0 +1,30 @@
+<p>articles-inactif works!</p>
+
+<h3>articles inactif</h3>
+<table class="table">
+    <thead>
+        <th>titre</th>
+        <th>theme</th>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let article of articles">
+        <tr *ngIf="!article.actif">
+            <td> {{ article.titre }}</td>
+            <td> {{ article.theme }}</td>
+            <td> 
+                <button (click)="updateArticle(article.id)" class="btn btn-info">modifier</button>
+            </td>
+            <td> 
+                <button (click)="deleteArticle(article.id)" class="btn btn-danger">supprimer</button>
+            </td>
+            <td> 
+                <button (click)="articleView(article.id)" class="btn btn-info">afficher</button>
+            </td>
+            <td> 
+                <button (click)="activate(article.id)" class="btn btn-danger">activer</button>
+            </td>
+        </tr>
+    </ng-container>
+
+    </tbody>
+</table>

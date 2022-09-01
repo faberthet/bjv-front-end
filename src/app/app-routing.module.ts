@@ -14,6 +14,8 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { LogoutComponent } from './logout/logout.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { ArticleComponent } from './articles/article/article.component';
+import { ArticlesActifComponent } from './admin/articles-admin/articles-actif/articles-actif.component';
+import { ArticlesInactifComponent } from './admin/articles-admin/articles-inactif/articles-inactif.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent,
@@ -24,8 +26,12 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'contact/sent', component: SentComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'admin/articles', component: ArticlesAdminComponent, canActivate:[AuthGuardService]},
-  {path: 'admin/articles/create', component: CreateArticleComponent},//, canActivate:[AuthGuardService]},
+  {path: 'admin/articles', component: ArticlesAdminComponent, canActivate:[AuthGuardService],
+  children:[  
+    {path: 'actif', component: ArticlesActifComponent},
+    {path: 'inactif', component: ArticlesInactifComponent}]
+  },
+  {path: 'admin/articles/create', component: CreateArticleComponent, canActivate:[AuthGuardService]},
   {path: 'admin/articles/update/:id', component: UpdateArticleComponent, canActivate:[AuthGuardService]},
   {path: 'admin/articles/details/:id', component: ArticleViewComponent, canActivate:[AuthGuardService]},
   {path: 'login', component: LoginComponent},

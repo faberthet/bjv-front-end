@@ -28,7 +28,10 @@ export class ArticlesComponent implements OnInit {
 
     this.route.params.subscribe(params => { //reset state quand le param id change dans l'url
       this.id = params['id'];
-      this.getArticle() 
+      this.getArticle();
+      if(this.sidenav.mode==='over'){
+        this.sidenav.close();
+      }
   });
 
     this.observer.observe(['(max-width: 991px)']).subscribe(
@@ -42,6 +45,7 @@ export class ArticlesComponent implements OnInit {
             this.sidenav.close();
          // });
           console.log('moins de 800px')
+
         }else{
         //  setTimeout(()=> {
             this.sidenav.mode = 'side';

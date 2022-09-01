@@ -15,4 +15,68 @@
       </ng-container>
     </ul> 
   </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Ecojardin
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <ul *ngFor="let article of articles">
+      <ng-container *ngIf='article.theme==="ecojardin"'>
+        <ng-container *ngIf='article.actif'>
+        <li><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></li>
+        <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
+        </ng-container>
+      </ng-container>
+    </ul> 
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Botanique
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <ul *ngFor="let article of articles">
+      <ng-container *ngIf='article.theme==="botanique"'>
+        <ng-container *ngIf='article.actif'>
+        <li><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></li>
+        <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
+        </ng-container>
+      </ng-container>
+    </ul> 
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Permaculture
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <ul *ngFor="let article of articles">
+      <ng-container *ngIf='article.theme==="permaculture"'>
+        <ng-container *ngIf='article.actif'>
+        <li><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></li>
+        <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
+        </ng-container>
+      </ng-container>
+    </ul> 
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Biodiversité domestique et sauvage
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <ul *ngFor="let article of articles">
+      <ng-container *ngIf='article.theme==="biodiversite"'>
+        <ng-container *ngIf='article.actif'>
+        <li><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></li>
+        <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
+        </ng-container>
+      </ng-container>
+    </ul> 
+  </mat-expansion-panel>
 

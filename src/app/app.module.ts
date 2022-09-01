@@ -30,6 +30,8 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { ArticlesActifComponent } from './admin/articles-admin/articles-actif/articles-actif.component';
+import { ArticlesInactifComponent } from './admin/articles-admin/articles-inactif/articles-inactif.component';
 //import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
@@ -52,6 +54,8 @@ import { MaterialModule } from './material/material.module';
     ArticleViewComponent,
     LoginComponent,
     LogoutComponent,
+    ArticlesActifComponent,
+    ArticlesInactifComponent,
     
 
   ],
