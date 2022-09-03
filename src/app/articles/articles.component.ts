@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout'
 
 import { ArticlesService } from 'src/app/services/articles.service';
@@ -18,7 +21,8 @@ export class ArticlesComponent implements OnInit {
   article: Article = new Article();
   trustedContent: SafeHtml;
 
-  faBars= faBarsStaggered;
+  faBars= faBars;
+  faXmark=faXmark;
 
   @ViewChild(MatSidenav,{static:true}) sidenav: MatSidenav;//
 

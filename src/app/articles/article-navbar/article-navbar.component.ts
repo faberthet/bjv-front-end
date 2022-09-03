@@ -12,6 +12,7 @@ import { ArticleWithoutContent } from 'src/app/models/article-without-content';
 export class ArticleNavbarComponent implements OnInit {
 
   articles: ArticleWithoutContent[];
+  
 
   constructor(private articleService: ArticlesService, private router: Router) { }
 

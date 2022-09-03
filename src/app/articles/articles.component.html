@@ -1,10 +1,15 @@
 <div class="container">
-    <div class="toolbar1">
-        <fa-icon [icon]="faBars" *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()"></fa-icon>
+    <div class="toolbar1"></div>
+    <div class="toolbar2" (click)="sidenav.toggle()">
+        <fa-icon class="bars"  [icon]="faBars" *ngIf="sidenav.mode === 'over'"></fa-icon>
+     menu
     </div>
     <mat-sidenav-container>
         <mat-sidenav #sidenav="matSidenav">
+            <!-- <div class="xmark"><fa-icon [icon]="faXmark" (click)="sidenav.toggle()"></fa-icon></div> -->
+            <div class="marg">
             <app-article-navbar></app-article-navbar>
+            </div>
         </mat-sidenav>
         <mat-sidenav-content>
             <div class="article-content mat-elevation-z4">
