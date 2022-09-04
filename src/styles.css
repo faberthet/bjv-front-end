@@ -41,3 +41,7 @@ body{
  } */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-expansion-panel-body { /* marche ici mais pas dans le component ???*/
+   padding: 0 !important;
+}

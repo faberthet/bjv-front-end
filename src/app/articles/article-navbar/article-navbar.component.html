@@ -1,4 +1,17 @@
-
+<mat-expansion-panel class="mat-elevation-z0 pad">
+  <mat-expansion-panel-header class="meph">
+    <mat-panel-title>
+      Végétaux d'ornement
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  
+  <ul>
+      <li><div>fsdfsqfsdfs</div>  </li>
+      <li><div>fsfsdfsdf dsfdsfsd fdsfsdfsff fssfdsf fsdfsfsfds fdsfds</div></li>
+      <li><div>fsdgfsgsdfg fsdfsfdsfsdfsdfd</div></li>
+      <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
+  </ul> 
+</mat-expansion-panel>
 <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
@@ -10,6 +23,9 @@
       <ng-container *ngIf='article.theme==="ornement"'>
         <ng-container *ngIf='article.actif'>
         <li><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></li>
+        <li><a routerLink="/articles/{{article.id}}">fsdfsqfsdfs</a></li>
+        <li><a routerLink="/articles/{{article.id}}">fsfsdfsdf dsfdsfsd fdsfsdfsff</a></li>
+        <li><a routerLink="/articles/{{article.id}}">fsdsfsdf fsdfsfdsfsdfsdfd</a></li>
         <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
         </ng-container>
       </ng-container>

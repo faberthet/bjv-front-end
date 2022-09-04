@@ -1,1 +1,55 @@
 
+mat-expansion-panel{
+    /* background-color: ; */
+    box-shadow: none;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-top: 10px;
+}
+ul{
+    list-style:none ;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+li{
+    min-height: 30px;
+    height: min-content;
+}
+li>div{
+    padding: 5px;
+    min-height: 30px;
+    height: min-content;
+}
+li>div:hover{
+background-color: aquamarine;
+cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+mat-expansion-panel-header{
+    background-color: grey !important;
+    min-height: 50px;
+    height: min-content
+}
+mat-expansion-panel-header:hover{
+    background-color:darkslategray !important
+   
+}
+  /* .meph:hover{
+    background-color: grey !important
+}   */
+.mat-expansion-panel-header.mat-expanded,
+.mat-expansion-panel-header.mat-expanded:hover
+{
+    min-height: 50px;
+    height: min-content
+} 
+
+/* ::ng-deep .parametersPanel .mat-expansion-panel-body {
+    padding: 0;
+} */
+
