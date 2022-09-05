@@ -6,9 +6,12 @@
   </mat-expansion-panel-header>
   
   <ul>
-      <li><div>fsdfsqfsdfs</div>  </li>
-      <li><div>fsfsdfsdf dsfdsfsd fdsfsdfsff fssfdsf fsdfsfsfds fdsfds</div></li>
-      <li><div>fsdgfsgsdfg fsdfsfdsfsdfsdfd</div></li>
+      <li><div><a href="">fsdfsqfsdfs </a></div> </li>
+  
+      <li><div><a href="">fsfsdfsdf dsfdsfsd fdsfsdfsff fssfdsf fsdfsfsfds fdsfds</a></div></li>
+      
+      <li><div><a href="">fsdgfsgsdfg fsdfsfdsfsdfsdfd</a></div></li>
+      
       <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
   </ul> 
 </mat-expansion-panel>
@@ -22,11 +25,8 @@
     <ul *ngFor="let article of articles">
       <ng-container *ngIf='article.theme==="ornement"'>
         <ng-container *ngIf='article.actif'>
-        <li><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></li>
-        <li><a routerLink="/articles/{{article.id}}">fsdfsqfsdfs</a></li>
-        <li><a routerLink="/articles/{{article.id}}">fsfsdfsdf dsfdsfsd fdsfsdfsff</a></li>
-        <li><a routerLink="/articles/{{article.id}}">fsdsfsdf fsdfsfdsfsdfsdfd</a></li>
-        <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
+        <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
+        
         </ng-container>
       </ng-container>
     </ul> 
@@ -41,8 +41,7 @@
     <ul *ngFor="let article of articles">
       <ng-container *ngIf='article.theme==="ecojardin"'>
         <ng-container *ngIf='article.actif'>
-        <li><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></li>
-        <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
+        <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
         </ng-container>
       </ng-container>
     </ul> 
@@ -57,7 +56,7 @@
     <ul *ngFor="let article of articles">
       <ng-container *ngIf='article.theme==="botanique"'>
         <ng-container *ngIf='article.actif'>
-        <li><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></li>
+        <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
         <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
         </ng-container>
       </ng-container>
@@ -73,7 +72,7 @@
     <ul *ngFor="let article of articles">
       <ng-container *ngIf='article.theme==="permaculture"'>
         <ng-container *ngIf='article.actif'>
-        <li><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></li>
+        <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
         <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
         </ng-container>
       </ng-container>
@@ -89,7 +88,7 @@
     <ul *ngFor="let article of articles">
       <ng-container *ngIf='article.theme==="biodiversite"'>
         <ng-container *ngIf='article.actif'>
-        <li><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></li>
+        <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
         <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
         </ng-container>
       </ng-container>

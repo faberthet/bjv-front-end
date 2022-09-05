@@ -18,25 +18,32 @@ li{
     height: min-content;
 }
 li>div{
-    padding: 5px;
+    padding: 6px;
     min-height: 30px;
     height: min-content;
+    border-radius: 5px;
 }
 li>div:hover{
-background-color: aquamarine;
+/* background-color: rgba(109, 179, 109, 0.65); */
 cursor: pointer;
+text-decoration: underline;
 }
 
 a{
-    text-decoration: none;
+    /* text-decoration: none; */
+    /* list-style-type: none; */
+    color: inherit; /* blue colors for links too */
+  text-decoration: inherit;
 }
 mat-expansion-panel-header{
-    background-color: grey !important;
+    background-color: rgba(31, 78, 31,0.65) !important;
     min-height: 50px;
-    height: min-content
+    height: min-content;
+    font-weight: bold;
+    
 }
 mat-expansion-panel-header:hover{
-    background-color:darkslategray !important
+    background-color:rgba(31, 78, 31,0.85) !important
    
 }
   /* .meph:hover{
