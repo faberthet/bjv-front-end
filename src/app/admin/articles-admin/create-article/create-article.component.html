@@ -1,5 +1,6 @@
-<p>create-article works!</p>
-<div class="container bg-light">
+
+<div class="container bg-light create">
+  <h2>Creez un article</h2> <br>
 <form #newArticleForm="ngForm" (ngSubmit)="onSubmit(newArticleForm)">
     <div class="form-group mb-3">
       <label for="titre" class="form-label">Titre</label>
@@ -9,7 +10,7 @@
       </div>
     </div>
     <div class="form-group mb-3">
-      <label for="theme" class="form-label">Theme</label>
+      <label for="theme" class="form-label">Thème</label>
       <select required [(ngModel)]="article.theme"  name="theme" id="theme" class="form-select" #theme="ngModel"> 
         
         <!-- <option value="choix" disabled>choisir un thème</option> -->

@@ -1,0 +1,21 @@
+.create{
+background-color: white;
+height: 80vh;
+margin: 10px auto;
+border-radius: 5px;
+padding: 10px;
+}
+h2{
+    margin: 0 auto;
+    width: max-content;
+}
+form{
+    max-width: 500px;
+    margin: 0 auto;
+}
+label{
+    margin: 0;
+}
+input,select{
+    border: 1px solid black;
+}
