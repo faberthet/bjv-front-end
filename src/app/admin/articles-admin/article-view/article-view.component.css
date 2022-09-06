@@ -1,0 +1,14 @@
+.view{
+    background-color: white;
+    padding: 0 130px;
+    min-height: 800px;
+}
+.content{
+    /* border: 1px solid black; */
+    min-height:100%;
+}
+@media only screen and (max-width: 991px) {
+    .view{
+        padding:0
+    }
+}

@@ -1,8 +1,13 @@
 <div class="container bgwhite">
     
-<h2>Gestion des articles</h2><button><a *ngIf="isLoggedIn" routerLink="/logout" class="nav-link">LogOut</a></button><br>
-<button><a class="nav-link text-uppercase" routerLink="/admin/articles/create">créer un article</a></button><br>
-<button><a routerLink="actif" > articles actifs</a></button>
-<button><a routerLink="inactif" > articles inactifs</a></button>
+<h2>Gestion des articles</h2>
+<div class="between">
+    <button><a class="nav-link text-uppercase" routerLink="/admin/articles/create">créer un article</a>
+    </button><br><button><a *ngIf="isLoggedIn" routerLink="/logout" class="nav-link">LogOut</a></button>
+</div>
+<br>
+<button ><a routerLink="actif" > articles actifs</a></button>
+<button class="mx-1" ><a routerLink="inactif" > articles inactifs</a></button>
+<br><br>
 <router-outlet></router-outlet>
 </div>

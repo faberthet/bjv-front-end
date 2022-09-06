@@ -1,3 +1,15 @@
 .bgwhite{
     background-color: aliceblue;
+    
+}
+h2{
+    text-align: center;
+}
+.between{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    color: inherit; 
+    text-decoration: inherit;
 }
