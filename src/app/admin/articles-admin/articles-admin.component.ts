@@ -34,10 +34,12 @@ export class ArticlesAdminComponent implements OnInit {
   }
 
   deleteArticle(id: number){
+    if(confirm("Are you sure to delete ")) {
     this.articleService.deleteArticle(id).subscribe( data => {
       console.log(data);
       this.getArticles();
     })
+  }
   }
 
   articleView(id: number){

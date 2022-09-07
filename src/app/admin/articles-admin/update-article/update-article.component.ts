@@ -34,7 +34,7 @@ export class UpdateArticleComponent implements OnInit {
     if(x.form.valid){
       this.articleService.updateArticle(this.id,this.article).subscribe({
         error: error => console.log(error),
-        next: res => this.router.navigate(['/admin/articles'])
+        next: res => this.router.navigate(['/admin/articles/actif'])
       });
     }
     x.form.controls.titre.touched=true

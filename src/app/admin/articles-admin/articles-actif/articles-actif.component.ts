@@ -29,11 +29,13 @@ export class ArticlesActifComponent implements OnInit {
     this.router.navigate(['admin/articles/update', id])
   }
 
-  deleteArticle(id: number){
+  deleteArticle(id: number, titre: string){
+    if(confirm("Supprimer " + titre + " ?")) {
     this.articleService.deleteArticle(id).subscribe( data => {
       console.log(data);
       this.getArticles();
     })
+  }
   }
 
   articleView(id: number){

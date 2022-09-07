@@ -25,7 +25,7 @@ export class CreateArticleComponent implements OnInit {
   saveArticle(){
     this.articleService.addArticle(this.article).subscribe({
       error: error => console.log(error),
-      next: res => this.router.navigate(['/admin/articles'])
+      next: res => this.router.navigate(['/admin/articles/actif'])
     })
   }
 
