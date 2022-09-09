@@ -4,7 +4,9 @@ mat-expansion-panel{
     box-shadow: none;
     border-radius: 5px;
     background-color: transparent;
+    margin:0 1rem;
     margin-top: 10px;
+
 }
 ul{
     list-style:none ;

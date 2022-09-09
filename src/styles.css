@@ -42,6 +42,26 @@ body{
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.mat-expansion-panel-body { /* marche ici mais pas dans le component ???*/
+.mat-expansion-panel-body { /* marche ici mais pas dans le component ?*/
    padding: 0 !important;
 }
+
+
+/* /////////////// ckEditor Styles /////////////////// */
+figure{
+   margin: 0 auto;
+}
+figcaption{
+   font-size: 12px;
+   text-align: center;
+}
+figure .image {
+/* margin: 0 auto; */
+
+ }
+ 
+ .image > img { /* doesnt work in component? */
+   width: 100%;
+ }
+
+ /* ////////// fin ckEditor Styles //////////// */

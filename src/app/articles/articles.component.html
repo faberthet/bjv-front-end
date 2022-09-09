@@ -11,16 +11,16 @@
             <app-article-navbar></app-article-navbar>
             </div>
         </mat-sidenav>
-        <mat-sidenav-content>
-            <div class="article-content mat-elevation-z4">
-                <div class="bg-light test2">
-                    <ng-container *ngIf="article.id!=1">
+        <mat-sidenav-content class="mat-elevation-z4">
+            <div class="article-content ">
+                <!-- <div class="bg-light test2"> -->
+                    <!-- <ng-container *ngIf="article.id!=1">
                         <div><span>Titre:</span> {{article.titre}}</div>
                         <div><span>Theme:</span> {{article.theme}}</div>
-                    </ng-container>
-                    <br>
-                    <div><span>content:</span> <div [innerHtml]="trustedContent"></div></div>
-                </div>
+                    </ng-container> -->
+                    
+                    <div [innerHtml]="trustedContent"></div>
+                <!-- </div> -->
             </div> 
         </mat-sidenav-content>
     </mat-sidenav-container>

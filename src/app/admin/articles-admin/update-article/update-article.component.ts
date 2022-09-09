@@ -52,6 +52,7 @@ export class UpdateArticleComponent implements OnInit {
         'bulletedList',
         'numberedList',
         '|',
+        'alignment',
         'outdent',
         'indent',
         '|',
@@ -76,10 +77,12 @@ export class UpdateArticleComponent implements OnInit {
     image: {
       toolbar: [
         'imageTextAlternative',
-        'imageStyle:inline',
-        'imageStyle:block',
-        'imageStyle:side',
-        'linkImage'
+        // 'imageStyle:inline',
+        // 'imageStyle:block',
+        // 'imageStyle:side',
+        'linkImage',
+        'toggleImageCaption',
+        'resizeImage'
       ]
     },
     table: {

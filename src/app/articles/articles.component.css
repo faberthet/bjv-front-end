@@ -36,7 +36,7 @@ cursor: pointer;
 }
 
 mat-sidenav{
-    padding: 1rem;
+    /* padding: 1rem; */
     padding-top: 0;
     width: 250px;
     background-color:darkseagreen; 
@@ -56,15 +56,26 @@ mat-sidenav{
     margin-top: 20px;
 }
 .article-content{
-background-color: white;
+/* background-color: white;
 height: 65vh;
 margin-left: 10px;
 padding: 10px;
-border-radius: 10px;
+border-radius: 10px; */
 
+}
+mat-sidenav-content{
+    background-color: white;
+    height: 65vh;
+    margin-left: 260px !important; /* witdh nav + 10px */
+    margin-left: 25px ;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 @media only screen and (max-width: 991px) {
+    mat-sidenav-content{
+        margin-left: 0;
+    }
     .article-content{
         margin-left: 0;
         min-height:78vh;

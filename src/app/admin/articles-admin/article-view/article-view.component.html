@@ -1,9 +1,7 @@
 <div class="container view">
     <div class="content">
-        <div><span>Titre:</span> {{article.titre}}</div>
-        <div><span>Theme:</span> {{article.theme}}</div>
-        <br>
-        <div><span>content:</span> <div [innerHtml]="trustedContent"></div></div>
+
+        <div [innerHtml]="trustedContent"></div>
 
     </div>
 </div>
