@@ -8,11 +8,12 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthenticationService {
-
+ 
+  private baseUrl: string="http://localhost:8080"
   constructor(private http:HttpClient,private router: Router) { }
 
   CheckIdentity(admin: Admin):Observable<object>{
-    return this.http.post("http://localhost:8080/admin/auth",admin)
+    return this.http.post(this.baseUrl + "/admin/auth",admin)
   }
 
    authenticate(admin: Admin):void {

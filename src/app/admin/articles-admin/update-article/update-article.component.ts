@@ -97,6 +97,7 @@ export class UpdateArticleComponent implements OnInit {
     simpleUpload: {
       // The URL that the images are uploaded to.
       uploadUrl: 'http://localhost:8080/upl',
+      
 
       // // Enable the XMLHttpRequest.withCredentials property.
       // withCredentials: true,

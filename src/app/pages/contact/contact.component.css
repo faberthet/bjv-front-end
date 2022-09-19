@@ -62,7 +62,7 @@ font-size: 1.1rem;
 }
 /* ////// gestion footer ////// */
 .containerForm{
-    margin-bottom: 70px;
+    margin-bottom: 100px;
     color: white;
 }
 @media only screen and (max-width: 991px) {
