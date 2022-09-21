@@ -16,12 +16,12 @@ ul{
     margin-left: 10px;
 }
 li{
-    min-height: 30px;
+    
     height: min-content;
 }
 li>div{
-    padding: 6px;
-    min-height: 30px;
+    padding: 2px;
+    /* min-height: 30px; */
     height: min-content;
     border-radius: 5px;
 }
