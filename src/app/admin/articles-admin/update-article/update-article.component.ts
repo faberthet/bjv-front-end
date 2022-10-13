@@ -48,6 +48,13 @@ export class UpdateArticleComponent implements OnInit {
         '|',
         'bold',
         'italic',
+        'underline',
+        '|',
+        'fontFamily',
+        // 'fontSize', // ne marche pas
+        'fontColor',
+        'fontBackgroundColor',
+        '|',
         'link',
         'bulletedList',
         'numberedList',
@@ -62,15 +69,10 @@ export class UpdateArticleComponent implements OnInit {
         'mediaEmbed',
         'undo',
         'redo',
-        'fontBackgroundColor',
-        'fontColor',
-        'fontFamily',
-        'fontSize',
         'highlight',
         'imageInsert',
-        'specialCharacters',
-        'todoList',
-        'underline'
+        //'specialCharacters', //ne fonctionne pas
+        'todoList'
       ]
     },
     language: 'fr',
@@ -96,7 +98,7 @@ export class UpdateArticleComponent implements OnInit {
     },
     simpleUpload: {
       // The URL that the images are uploaded to.
-      uploadUrl: 'http://localhost:8080/upl',
+      uploadUrl: 'http://breizhjar-env.eba-tipx9yis.eu-west-3.elasticbeanstalk.com/upl',
       
 
       // // Enable the XMLHttpRequest.withCredentials property.

@@ -59,7 +59,18 @@ figure .image {
 /* margin: 0 auto; */
 
  }
- 
+ figure table{
+   width: 100% ;
+ }
+/* choix bordure intérieur table*/
+.table > *> * > *{ 
+   border-bottom-width: 0 !important;
+}
+/*.table > *> * > * >*{
+
+   border-right-width: 1px ;
+} */
+
  .image > img { /* doesnt work in component? */
    width: 100%;
  }

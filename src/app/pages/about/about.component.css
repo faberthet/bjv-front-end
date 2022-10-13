@@ -23,7 +23,11 @@
 .about{
     padding: 30px 25px;
     /* background-color:cadetblue; */
-    background-color: darkseagreen;
+     /* background-color: darkseagreen; */
+    /* background-color:khaki; */
+    /* background-color: lightgoldenrodyellow; */
+     /* background-color: lightyellow; */
+     background-color: palegoldenrod; 
     position: absolute;
     width: 600px;
     left: 50%;
