@@ -61,18 +61,22 @@ figure .image {
  }
  figure table{
    width: 100% ;
+   border: 1px solid #b3b3b3;
  }
 /* choix bordure intérieur table*/
 .table > *> * > *{ 
-   border-bottom-width: 0 !important;
+   /* border-bottom-width: 0 !important; */
 }
-/*.table > *> * > * >*{
+.table > *> * > * >*{
 
    border-right-width: 1px ;
-} */
+} 
 
  .image > img { /* doesnt work in component? */
    width: 100%;
+ }
+ p{
+   margin-bottom: 0;
  }
 
  /* ////////// fin ckEditor Styles //////////// */

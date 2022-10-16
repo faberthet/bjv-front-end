@@ -98,7 +98,7 @@ export class UpdateArticleComponent implements OnInit {
     },
     simpleUpload: {
       // The URL that the images are uploaded to.
-      uploadUrl: 'http://breizhjar-env.eba-tipx9yis.eu-west-3.elasticbeanstalk.com/upl',
+      uploadUrl: 'https://api.breizh-jardinvivant.com/upl',
       
 
       // // Enable the XMLHttpRequest.withCredentials property.
@@ -106,10 +106,11 @@ export class UpdateArticleComponent implements OnInit {
 
       // // Headers sent along with the XMLHttpRequest to the upload server.
       headers: {
-        'Image-Folder' : this.id
+        'Image-Folder' : this.id,
       //     'X-CSRF-TOKEN': 'CSRF-Token',
       //     Authorization: 'Bearer <JSON Web Token>',
-      //     Access-Control-Allow-Credentials: true
+          //  'Access-Control-Allow-Credentials': true
+       
       }
   }
    
