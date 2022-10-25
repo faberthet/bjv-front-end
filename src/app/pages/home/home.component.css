@@ -6,6 +6,7 @@
     height:600px;
     margin: 60px auto;
     position: relative;
+    margin-top: 44px;  /* provisoire */
     }
     
     .intro-img{
@@ -69,4 +70,10 @@
        margin-top: 0;
  
     }
+ }
+
+ .alerte1{
+   background-color:lightpink;
+   color: red;
+   text-align: center;
  }
