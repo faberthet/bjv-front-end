@@ -6,7 +6,7 @@
     height:600px;
     margin: 60px auto;
     position: relative;
-    margin-top: 44px;  /* provisoire */
+    /* margin-top: 44px;   */ /* provisoire*/
     }
     
     .intro-img{
@@ -36,13 +36,19 @@
  @media only screen and (max-width: 1160px) {
      .main1{
        width: 95%;
-       height: 500px; 
+       height: 530px; 
     } 
  }
+ @media only screen and (max-width: 1117px) {
+   .main1{
+     width: 95%;
+     height: 530px; 
+  } 
+}
  
  @media only screen and (max-width: 1050px) {
     .main1{
-      height: 450px;
+      height: 500px;
       margin: 75px auto;
     }  
  

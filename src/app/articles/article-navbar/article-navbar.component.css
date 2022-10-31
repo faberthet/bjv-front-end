@@ -6,7 +6,6 @@ mat-expansion-panel{
     background-color: transparent;
     margin:0 1rem;
     margin-top: 10px;
-
 }
 ul{
     list-style:none ;
@@ -38,11 +37,11 @@ a{
   text-decoration: inherit;
 }
 mat-expansion-panel-header{
-    background-color: rgba(31, 78, 31,0.65) !important;
+    background-color: rgba(31, 78, 31,0.65) !important; 
     min-height: 50px;
     height: min-content;
-    font-weight: bold;
-    
+    font-weight: 500;
+   
 }
 mat-expansion-panel-header:hover{
     background-color:rgba(31, 78, 31,0.85) !important
