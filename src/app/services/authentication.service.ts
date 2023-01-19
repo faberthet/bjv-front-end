@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AuthenticationService {
  
-  //private baseUrl: string="http://localhost:8080"
+  //private baseUrl: string="http://localhost:5000"
   //private baseUrl: string="http://breizhjar-env.eba-tipx9yis.eu-west-3.elasticbeanstalk.com"
   private baseUrl: string="https://api.breizh-jardinvivant.com"
 
@@ -19,9 +19,10 @@ export class AuthenticationService {
     return this.http.post(this.baseUrl + "/admin/auth",admin)
   }
 
-   authenticate(admin: Admin):void {
-    
+   authenticate(valid:any,admin: Admin):void {
+    if(valid["valid"]==true){
       sessionStorage.setItem('username', admin.adminId)
+    }
   }
 
   isUserLoggedIn() {

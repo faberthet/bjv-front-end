@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   checkLogin() {
     this.loginservice.CheckIdentity(this.user).subscribe({
       error: error => console.log(error),
-      next: res => [console.log(res),this.loginservice.authenticate(this.user), this.router.navigate(['/admin/articles/actif'])]
+      next: res => [console.log(res),this.loginservice.authenticate(res, this.user), this.router.navigate(['/admin/articles/actif'])]
     })
   }
 

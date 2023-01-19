@@ -9,7 +9,7 @@ import { ArticleWithoutContent } from '../models/article-without-content';
 })
 export class ArticlesService {
 
-  //private baseUrl: string="http://localhost:8080/api/v1/articles"
+  //private baseUrl: string="http://localhost:5000/api/v1/articles"
   //private baseUrl: string="http://breizhjar-env.eba-tipx9yis.eu-west-3.elasticbeanstalk.com/api/v1/articles"
   private baseUrl: string="https://api.breizh-jardinvivant.com/api/v1/articles"
 

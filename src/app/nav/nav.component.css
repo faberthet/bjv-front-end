@@ -4,6 +4,9 @@ nav{
     /* border-top: 2px solid rgb(31, 78, 31);
     border-bottom: 2px solid rgb(31, 78, 31); */
  }
+ .bjv{
+   font-weight: 500;
+ }
 
  @media only screen and (max-width: 991px) {
     nav{
