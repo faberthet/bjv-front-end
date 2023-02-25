@@ -1,7 +1,8 @@
 export class Article {
     id: number;
     titre: string;
-    theme: string;
+    section: string;
+    subsection:string;
     content: string;
     actif: boolean;
 }

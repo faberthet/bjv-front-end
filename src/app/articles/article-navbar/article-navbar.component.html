@@ -23,7 +23,7 @@
     </mat-expansion-panel-header>
 
     <ul *ngFor="let article of articles">
-      <ng-container *ngIf='article.theme==="ornement"'>
+      <ng-container *ngIf='article.section==="ornement"'>
         <ng-container *ngIf='article.actif'>
         <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
         
@@ -39,7 +39,7 @@
     </mat-expansion-panel-header>
 
     <ul *ngFor="let article of articles">
-      <ng-container *ngIf='article.theme==="ecojardin"'>
+      <ng-container *ngIf='article.section==="ecojardin"'>
         <ng-container *ngIf='article.actif'>
         <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
         </ng-container>
@@ -54,7 +54,7 @@
     </mat-expansion-panel-header>
 
     <ul *ngFor="let article of articles">
-      <ng-container *ngIf='article.theme==="botanique"'>
+      <ng-container *ngIf='article.section==="botanique"'>
         <ng-container *ngIf='article.actif'>
         <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
         <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
@@ -70,7 +70,7 @@
     </mat-expansion-panel-header>
 
     <ul *ngFor="let article of articles">
-      <ng-container *ngIf='article.theme==="permaculture"'>
+      <ng-container *ngIf='article.section==="permaculture"'>
         <ng-container *ngIf='article.actif'>
         <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
         <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
@@ -86,7 +86,7 @@
     </mat-expansion-panel-header>
 
     <ul *ngFor="let article of articles">
-      <ng-container *ngIf='article.theme==="biodiversite"'>
+      <ng-container *ngIf='article.section==="biodiversite"'>
         <ng-container *ngIf='article.actif'>
         <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
         <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->

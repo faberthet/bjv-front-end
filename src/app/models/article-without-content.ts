@@ -2,7 +2,8 @@ export class ArticleWithoutContent {
 
     id: number;
     titre: string;
-    theme: string;
+    section: string;
+    subsection: string;
     actif: boolean;
 
 }

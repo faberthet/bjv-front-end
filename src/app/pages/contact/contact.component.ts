@@ -19,6 +19,7 @@ export class ContactComponent implements OnInit {
 
   //private readonly url:string="http://breizhjar-env.eba-tipx9yis.eu-west-3.elasticbeanstalk.com/";
   private readonly url:string="https://api.breizh-jardinvivant.com/";
+  //private readonly url:string="http://localhost:5000/"
   public state:string="not-submitted";
   public buttonState:string="button-not-submitted";
   y:any;
