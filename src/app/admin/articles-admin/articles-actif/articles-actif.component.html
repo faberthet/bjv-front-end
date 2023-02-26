@@ -1,7 +1,8 @@
 <h3>articles actif</h3><br>
 <table class="table">
     <thead>
-        <th>theme</th>
+        <th>section</th>
+        <th>sous-section</th>
         <th>titre</th>
     </thead>
     <tbody>
@@ -9,6 +10,7 @@
             <ng-container  *ngIf="article.actif">
                 <tr *ngIf="article.id==1">
                     <td> {{ article.section }}</td>
+                    <td> {{ article.subsection }}</td>
                     <td> {{ article.titre }}</td>
                     <td> 
                         <button (click)="updateArticle(article.id)" class="btn btn-info">modifier</button>
@@ -21,6 +23,7 @@
                 </tr>
                 <tr *ngIf="article.id!=1">
                     <td> {{ article.section }}</td>
+                    <td> {{ article.subsection }}</td>
                     <td> {{ article.titre }}</td>
                     <td> 
                         <button (click)="updateArticle(article.id)" class="btn btn-info">modifier</button>

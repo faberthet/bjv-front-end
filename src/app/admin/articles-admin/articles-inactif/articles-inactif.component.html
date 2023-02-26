@@ -1,13 +1,15 @@
 <h3>articles inactif</h3><br>
 <table class="table">
     <thead>
-        <th>theme</th>
+        <th>section</th>
+        <th>sous-section</th>
         <th>titre</th>
     </thead>
     <tbody>
         <ng-container *ngFor="let article of articles">
         <tr *ngIf="!article.actif">
             <td> {{ article.section }}</td>
+            <td> {{ article.subsection }}</td>
             <td> {{ article.titre }}</td>
             <td> 
                 <button (click)="updateArticle(article.id)" class="btn btn-info">modifier</button>

@@ -19,7 +19,8 @@ export class CreateArticleComponent implements OnInit {
   ngOnInit(): void {
     this.article.content="" //error backend lors de updatearticle si null... 
     this.article.actif=false
-    this.article.section="ornement"
+    //this.article.section=""
+    //this.article.subsection=""
   }
 
   saveArticle(){
