@@ -7,7 +7,7 @@
     <tbody>
         <ng-container *ngFor="let article of articles">
         <tr *ngIf="!article.actif">
-            <td> {{ article.theme }}</td>
+            <td> {{ article.section }}</td>
             <td> {{ article.titre }}</td>
             <td> 
                 <button (click)="updateArticle(article.id)" class="btn btn-info">modifier</button>

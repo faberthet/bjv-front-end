@@ -8,7 +8,7 @@
         <ng-container *ngFor="let article of articles">
             <ng-container  *ngIf="article.actif">
                 <tr *ngIf="article.id==1">
-                    <td> {{ article.theme }}</td>
+                    <td> {{ article.section }}</td>
                     <td> {{ article.titre }}</td>
                     <td> 
                         <button (click)="updateArticle(article.id)" class="btn btn-info">modifier</button>
@@ -20,7 +20,7 @@
                     <td></td>
                 </tr>
                 <tr *ngIf="article.id!=1">
-                    <td> {{ article.theme }}</td>
+                    <td> {{ article.section }}</td>
                     <td> {{ article.titre }}</td>
                     <td> 
                         <button (click)="updateArticle(article.id)" class="btn btn-info">modifier</button>

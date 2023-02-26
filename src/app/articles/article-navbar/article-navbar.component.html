@@ -15,83 +15,30 @@
       
   </ul> 
 </mat-expansion-panel> -->
-<mat-expansion-panel class="mat-elevation-z0">
+
+<mat-expansion-panel class="mat-elevation-z0" *ngFor="let section of sections">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Végétaux d'ornement
+        {{section.name}}
       </mat-panel-title>
     </mat-expansion-panel-header>
 
-    <ul *ngFor="let article of articles">
-      <ng-container *ngIf='article.section==="ornement"'>
-        <ng-container *ngIf='article.actif'>
-        <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
-        
-        </ng-container>
-      </ng-container>
-    </ul> 
-  </mat-expansion-panel>
-  <mat-expansion-panel class="mat-elevation-z0">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Ecojardin
-      </mat-panel-title>
-    </mat-expansion-panel-header>
+    <ul *ngFor="let sectionChild of section.children">
+      <ng-container *ngIf='sectionChild.type=="subsection"'>
+        <li><div>{{sectionChild.subsection?.name}}
+          <ul *ngFor="let article of sectionChild.subsection?.articles">
+            <li><div class="article-name"><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
+          </ul>
 
-    <ul *ngFor="let article of articles">
-      <ng-container *ngIf='article.section==="ecojardin"'>
-        <ng-container *ngIf='article.actif'>
-        <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
+        </div></li>
+      </ng-container>
+      <ng-container *ngIf='sectionChild.type=="article"'>
+        <ng-container *ngIf='sectionChild.article?.actif'>
+        <li><div class="article-name"><a routerLink="/articles/{{sectionChild.article?.id}}">{{sectionChild.article?.titre}}</a></div></li>
         </ng-container>
       </ng-container>
-    </ul> 
-  </mat-expansion-panel>
-  <mat-expansion-panel class="mat-elevation-z0">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Botanique
-      </mat-panel-title>
-    </mat-expansion-panel-header>
 
-    <ul *ngFor="let article of articles">
-      <ng-container *ngIf='article.section==="botanique"'>
-        <ng-container *ngIf='article.actif'>
-        <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
-        <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
-        </ng-container>
-      </ng-container>
     </ul> 
   </mat-expansion-panel>
-  <mat-expansion-panel class="mat-elevation-z0">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Permaculture
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-
-    <ul *ngFor="let article of articles">
-      <ng-container *ngIf='article.section==="permaculture"'>
-        <ng-container *ngIf='article.actif'>
-        <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
-        <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
-        </ng-container>
-      </ng-container>
-    </ul> 
-  </mat-expansion-panel>
-  <mat-expansion-panel class="mat-elevation-z0">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Biodiversité domestique et sauvage
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-
-    <ul *ngFor="let article of articles">
-      <ng-container *ngIf='article.section==="biodiversite"'>
-        <ng-container *ngIf='article.actif'>
-        <li><div><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
-        <!-- <li><button (click)="redirect(article.id)">{{article.titre}}</button></li> -->
-        </ng-container>
-      </ng-container>
-    </ul> 
-  </mat-expansion-panel>
+  
 

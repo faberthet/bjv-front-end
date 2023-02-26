@@ -22,9 +22,9 @@ li>div{
     padding: 2px;
     /* min-height: 30px; */
     height: min-content;
-    border-radius: 5px;
+   
 }
-li>div:hover{
+li>.article-name:hover{
 /* background-color: rgba(109, 179, 109, 0.65); */
 cursor: pointer;
 text-decoration: underline;

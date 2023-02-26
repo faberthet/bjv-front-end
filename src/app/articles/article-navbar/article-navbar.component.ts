@@ -13,8 +13,18 @@ import { Subsection } from 'src/app/models/subsection';
 })
 export class ArticleNavbarComponent implements OnInit {
 
-  articles: ArticleWithoutContent[];
+  //articles: ArticleWithoutContent[];
   sections:Section[]=[];
+
+  articles:ArticleWithoutContent[]=[
+    {id:1,titre:"titre1",section:"section1",subsection:"subsection1",actif:true},
+    {id:2,titre:"titre2",section:"section1",subsection:"",actif:true},
+    {id:3,titre:"titre22",section:"section1",subsection:"",actif:true},
+    {id:4,titre:"titre3",section:"section1",subsection:"subsection1",actif:true},
+    {id:5,titre:"titre4",section:"section1",subsection:"subsection2",actif:true},
+    {id:6,titre:"titre5",section:"section1",subsection:"subsection2",actif:true},
+    {id:7,titre:"titre6",section:"section2",subsection:"",actif:true}
+  ]
 
   constructor(private articleService: ArticlesService, private router: Router) { }
 
@@ -103,14 +113,14 @@ export class ArticleNavbarComponent implements OnInit {
   }
 
   isSubSection(sectionChild: SectionChild):boolean{
-    return sectionChild.type=="subSection"
+    return sectionChild.type=="subsection"
   }
 
   addSubSectionToSection(sectionName:string, subSectionName:string){
     for(var i=0; i < this.sections.length; i++){
       if(this.sections[i].name==sectionName){
         var sectionChild=new SectionChild();
-        sectionChild.type="subSection"
+        sectionChild.type="subsection"
         sectionChild.subsection=this.createSubSection(subSectionName)
         this.sections[i].children.push(sectionChild);
         break;
