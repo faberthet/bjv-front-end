@@ -11,13 +11,10 @@
     </div>
     <div class="form-group mb-3">
       <label for="theme" class="form-label">Sélectionner une section</label>
-      <select required [(ngModel)]="article.section"  name="selection" id="selection" class="form-select"> 
-  
-        <option value="ornement">Végétaux d'ornement</option>
-        <option value="ecojardin">Écojardin</option>
-        <option value="botanique">Botanique</option>
-        <option value="permaculture">Permaculture</option>
-        <option value="biodiversite">Biodiversité domestique et sauvage</option>
+      <select required [(ngModel)]="article.section" (change)="onSelect($event)"  name="selection" id="selection" class="form-select"> 
+        <ng-container *ngFor="let section of sections">
+          <option value="{{section.name}}">{{section.name}}</option>
+        </ng-container>
       </select>
     </div>
     <div class="form-group mb-3">
@@ -30,11 +27,9 @@
     <div class="form-group mb-3">
       <label for="theme" class="form-label">Sélectionner une sous-section</label>
       <select required [(ngModel)]="article.subsection"  name="selection2" id="selection2" class="form-select"> 
-        <option value="ornement">Végétaux d'ornement</option>
-        <option value="ecojardin">Écojardin</option>
-        <option value="botanique">Botanique</option>
-        <option value="permaculture">Permaculture</option>
-        <option value="biodiversite">Biodiversité domestique et sauvage</option>
+        <ng-container *ngFor="let subsection of subsections">
+          <option value="{{subsection.name}}">{{subsection.name}}</option>
+        </ng-container>
       </select>
     </div>
     <div class="form-group mb-3">
