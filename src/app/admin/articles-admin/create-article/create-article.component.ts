@@ -29,19 +29,14 @@ export class CreateArticleComponent implements OnInit {
     this.getSections();
   }
 
-  saveArticle(){
-    this.articleService.addArticle(this.article).subscribe({
-      error: error => console.log(error),
-      next: res => this.router.navigate(['/admin/articles/actif'])
-    })
-  }
 
   onSubmit(x:any){
     if(x.form.valid){
       this.saveArticle();
+      //switchmap pipe... for chaining http request...
     }
     x.form.controls.titre.touched=true
-    x.form.controls.theme.touched=true
+    x.form.controls.section.touched=true
   }
 
   onSelect($event: Event){
@@ -49,19 +44,63 @@ export class CreateArticleComponent implements OnInit {
     this.article.subsection="";
     console.log((<HTMLTextAreaElement>$event.target).value)
     const value:string=(<HTMLTextAreaElement>$event.target).value
-    this.articleService.getSubsections(value).subscribe({
+    this.getSubsection(value);
+  }
+
+  
+  saveArticle(){
+    this.articleService.addArticle(this.article).subscribe({
       error: error => console.log(error),
-      next: res => [
-        this.subsections=<{name:string, sectionName:string,id:number}[]>res,
-        console.log(this.subsections)
-      ]
+      next: res => this.router.navigate(['/admin/articles/actif'])
     })
+  }
+
+  addSection(section:string){
+
+    let addsection:Boolean=true
+
+    this.sections.forEach( (value) => {
+      if(value.name==section){ //si la section existe deja..
+        addsection=false
+      }
+    })
+    if(addsection){ //si la section n'existe pas encore
+      this.articleService.addSection({name:section}).subscribe({
+        error: error => console.log(error)
+      })
+    }
+  }
+
+  addSubsection(section:string,subsection:string){
+
+    let addsubsection:Boolean=true
+
+    this.subsections.forEach( (value) => {
+      if(value.name==subsection){ //si la sous-section existe deja..
+        addsubsection=false
+      }
+    })
+    if(addsubsection){ //si la sous-section n'existe pas encore
+      this.articleService.addSubsection({name:subsection, sectionName:section}).subscribe({
+        error: error => console.log(error)
+      })
+    }
   }
 
   getSections(){
     this.articleService.getSections().subscribe({
       error: error => console.log(error),
       next: res => [this.sections=<{name:string}[]>res,console.log(this.sections)]
+    })
+  }
+
+  getSubsection(section:string){
+    this.articleService.getSubsections(section).subscribe({
+      error: error => console.log(error),
+      next: res => [
+        this.subsections=<{name:string, sectionName:string,id:number}[]>res,
+        console.log(this.subsections)
+      ]
     })
   }
 

@@ -54,7 +54,7 @@ export class ArticlesService {
   getSubsections(section:string): Observable<Object>{
     return this.http.get(this.baseUrl + "subsections?section="+ section)
   }
-  addSection(section:string): Observable<Object>{
+  addSection(section:{name:string}): Observable<Object>{
     return this.http.post(this.baseUrl + "section",section)
   }
   addSubsection(subsection:{name:string, sectionName:string}): Observable<Object>{
