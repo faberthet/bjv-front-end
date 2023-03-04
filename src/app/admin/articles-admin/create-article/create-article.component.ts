@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Article } from 'src/app/models/article';
 import { ArticlesService } from 'src/app/services/articles.service';
 import { Router } from '@angular/router';
+import { forkJoin, Observable } from 'rxjs';
 // import * as CustomEditor from 'ckeditor5-custom-build/build/ckeditor'
 
 
@@ -17,6 +18,7 @@ export class CreateArticleComponent implements OnInit {
   sections:{name:string}[];
   subsections:{name:string, sectionName:string, id:number}[];
   subsDisplay:{name?:string, sectionName:string, id:number}[];
+  requests:Observable<Object>[];
   
   constructor(private articleService: ArticlesService,private router: Router) { }
 
@@ -33,7 +35,12 @@ export class CreateArticleComponent implements OnInit {
   onSubmit(x:any){
     if(x.form.valid){
       this.saveArticle();
-      //switchmap pipe... for chaining http request...
+      this.addSection(this.article.section);
+      this.addSubsection(this.article.section, this.article.subsection);
+      forkJoin(this.requests).subscribe({
+        error: error => console.log(error),
+        next: res => this.router.navigate(['/admin/articles/actif'])
+      })
     }
     x.form.controls.titre.touched=true
     x.form.controls.section.touched=true
@@ -49,10 +56,11 @@ export class CreateArticleComponent implements OnInit {
 
   
   saveArticle(){
-    this.articleService.addArticle(this.article).subscribe({
-      error: error => console.log(error),
-      next: res => this.router.navigate(['/admin/articles/actif'])
-    })
+   this.requests.push(this.articleService.addArticle(this.article))
+    // this.articleService.addArticle(this.article).subscribe({
+    //   error: error => console.log(error),
+    //   next: res => this.router.navigate(['/admin/articles/actif'])
+    // })
   }
 
   addSection(section:string){
@@ -65,9 +73,7 @@ export class CreateArticleComponent implements OnInit {
       }
     })
     if(addsection){ //si la section n'existe pas encore
-      this.articleService.addSection({name:section}).subscribe({
-        error: error => console.log(error)
-      })
+      this.requests.push(this.articleService.addSection({name:section}))
     }
   }
 
@@ -81,9 +87,7 @@ export class CreateArticleComponent implements OnInit {
       }
     })
     if(addsubsection){ //si la sous-section n'existe pas encore
-      this.articleService.addSubsection({name:subsection, sectionName:section}).subscribe({
-        error: error => console.log(error)
-      })
+      this.requests.push(this.articleService.addSubsection({name:subsection, sectionName:section}))
     }
   }
 
