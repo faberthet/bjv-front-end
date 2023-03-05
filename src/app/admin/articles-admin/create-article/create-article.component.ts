@@ -15,10 +15,10 @@ export class CreateArticleComponent implements OnInit {
 
   article: Article = new Article();
 
-  sections:{name:string}[];
-  subsections:{name:string, sectionName:string, id:number}[];
-  subsDisplay:{name?:string, sectionName:string, id:number}[];
-  requests:Observable<Object>[];
+  sections:{name:string}[]=[];
+  subsections:{name:string, sectionName:string, id:number}[]=[];
+  //subsDisplay:{name?:string, sectionName:string, id:number}[]=[];
+  requests:Observable<Object>[]=[];
   
   constructor(private articleService: ArticlesService,private router: Router) { }
 

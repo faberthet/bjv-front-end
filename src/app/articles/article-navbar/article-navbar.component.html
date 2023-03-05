@@ -15,30 +15,30 @@
       
   </ul> 
 </mat-expansion-panel> -->
+<ng-container *ngFor="let section of sections">
+  <mat-expansion-panel class="mat-elevation-z0" *ngIf='section.name!="intro"'>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{section.name}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
 
-<mat-expansion-panel class="mat-elevation-z0" *ngFor="let section of sections">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        {{section.name}}
-      </mat-panel-title>
-    </mat-expansion-panel-header>
+      <ul *ngFor="let sectionChild of section.children">
+        <ng-container *ngIf='sectionChild.type=="subsection"'>
+          <li><div>{{sectionChild.subsection?.name}}
+            <ul *ngFor="let article of sectionChild.subsection?.articles">
+              <li><div class="article-name"><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
+            </ul>
 
-    <ul *ngFor="let sectionChild of section.children">
-      <ng-container *ngIf='sectionChild.type=="subsection"'>
-        <li><div>{{sectionChild.subsection?.name}}
-          <ul *ngFor="let article of sectionChild.subsection?.articles">
-            <li><div class="article-name"><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
-          </ul>
-
-        </div></li>
-      </ng-container>
-      <ng-container *ngIf='sectionChild.type=="article"'>
-        <ng-container *ngIf='sectionChild.article?.actif'>
-        <li><div class="article-name"><a routerLink="/articles/{{sectionChild.article?.id}}">{{sectionChild.article?.titre}}</a></div></li>
+          </div></li>
         </ng-container>
-      </ng-container>
+        <ng-container *ngIf='sectionChild.type=="article"'>
+          <ng-container *ngIf='sectionChild.article?.actif'>
+          <li><div class="article-name"><a routerLink="/articles/{{sectionChild.article?.id}}">{{sectionChild.article?.titre}}</a></div></li>
+          </ng-container>
+        </ng-container>
 
-    </ul> 
+      </ul> 
   </mat-expansion-panel>
-  
+</ng-container>
 

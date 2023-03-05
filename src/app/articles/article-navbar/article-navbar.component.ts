@@ -13,32 +13,36 @@ import { Subsection } from 'src/app/models/subsection';
 })
 export class ArticleNavbarComponent implements OnInit {
 
-  //articles: ArticleWithoutContent[];
+  articles: ArticleWithoutContent[]=[];
   sections:Section[]=[];
 
-  articles:ArticleWithoutContent[]=[
-    {id:1,titre:"titre1",section:"section1",subsection:"subsection1",actif:true},
-    {id:2,titre:"titre2",section:"section1",subsection:"",actif:true},
-    {id:3,titre:"titre22",section:"section1",subsection:"",actif:true},
-    {id:4,titre:"titre3",section:"section1",subsection:"subsection1",actif:true},
-    {id:5,titre:"titre4",section:"section1",subsection:"subsection2",actif:true},
-    {id:6,titre:"titre5",section:"section1",subsection:"subsection2",actif:true},
-    {id:7,titre:"titre6",section:"section2",subsection:"",actif:true}
-  ]
+  // articles:ArticleWithoutContent[]=[
+  //   {id:1,titre:"titre1",section:"section1",subsection:"subsection1",actif:true},
+  //   {id:2,titre:"titre2",section:"section1",subsection:"",actif:true},
+  //   {id:3,titre:"titre22",section:"section1",subsection:"",actif:true},
+  //   {id:4,titre:"titre3",section:"section1",subsection:"subsection1",actif:true},
+  //   {id:5,titre:"titre4",section:"section1",subsection:"subsection2",actif:true},
+  //   {id:6,titre:"titre5",section:"section1",subsection:"subsection2",actif:true},
+  //   {id:7,titre:"titre6",section:"section2",subsection:"",actif:true}
+  // ]
 
   constructor(private articleService: ArticlesService, private router: Router) { }
 
   ngOnInit(): void {
     this.getArticles();
-    this.toSectionTable(this.articles);
-    console.log(this.sections)
+
   }
 
   private getArticles(){ 
-    this.articleService.getArticlesWithoutContent().subscribe( data => {
-      this.articles=data;
+    this.articleService.getArticlesWithoutContent().subscribe({
+      error: error => console.log(error),
+      next: res => [this.articles=res, this.toSectionTable(this.articles), console.log(this.articles),console.log(this.sections)]
     })
   }
+
+  // data => {
+  //   this.articles=data;
+  // }
 
   // redirect(id:number){
   //   this.router.navigate(['articles', id])
