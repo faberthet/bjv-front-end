@@ -9,14 +9,11 @@
           </div>
         </div>
         <div class="form-group mb-3">
-          <label for="theme" class="form-label">Sélectionner une section</label>
-          <select required [(ngModel)]="article.section"  name="selection" id="selection" class="form-select"> 
-      
-            <option value="ornement">Végétaux d'ornement</option>
-            <option value="ecojardin">Écojardin</option>
-            <option value="botanique">Botanique</option>
-            <option value="permaculture">Permaculture</option>
-            <option value="biodiversite">Biodiversité domestique et sauvage</option>
+          <label for="selection" class="form-label">Sélectionner une section</label>
+          <select required [(ngModel)]="article.section" (change)="onSelect($event)"  name="selection" id="selection" class="form-select"> 
+            <ng-container *ngFor="let section of sections">
+              <option value="{{section.name}}">{{section.name}}</option>
+            </ng-container>
           </select>
         </div>
         <div class="form-group mb-3">
@@ -26,23 +23,17 @@
             <div *ngIf="section.errors?.['required']">Section requise</div>
           </div>
         </div>
-
         <div class="form-group mb-3">
-          <label for="theme" class="form-label">Sélectionner une sous-section</label>
+          <label for="selection2" class="form-label">Sélectionner une sous-section</label>
           <select required [(ngModel)]="article.subsection"  name="selection2" id="selection2" class="form-select"> 
-            <option value="ornement">Végétaux d'ornement</option>
-            <option value="ecojardin">Écojardin</option>
-            <option value="botanique">Botanique</option>
-            <option value="permaculture">Permaculture</option>
-            <option value="biodiversite">Biodiversité domestique et sauvage</option>
+            <ng-container *ngFor="let subsection of subsections">
+              <option value="{{subsection.name}}">{{subsection.name}}</option>
+            </ng-container>
           </select>
         </div>
         <div class="form-group mb-3">
-          <label for="section" class="form-label">ou créer une nouvelle sous-section:</label>
+          <label for="subsection" class="form-label">ou créer une nouvelle sous-section:</label>
           <input required [(ngModel)]="article.subsection" type="text" class="form-control" id="subsection" name="subsection" #subsection="ngModel">
-          <!-- <div class="alert alert-danger" *ngIf="subsection.touched && !subsection.valid">
-            <div *ngIf="subsection.errors?.['required']">Sous-section requise</div>
-          </div> -->
         </div>
 
         <div class="form-group mb-3">

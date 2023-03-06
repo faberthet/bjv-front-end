@@ -17,7 +17,7 @@ export class CreateArticleComponent implements OnInit {
 
   sections:{name:string}[]=[];
   subsections:{name:string, sectionName:string, id:number}[]=[];
-  //subsDisplay:{name?:string, sectionName:string, id:number}[]=[];
+  
   requests:Observable<Object>[]=[];
   
   constructor(private articleService: ArticlesService,private router: Router) { }

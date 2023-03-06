@@ -35,13 +35,7 @@
     <div class="form-group mb-3">
       <label for="subsection" class="form-label">ou créer une nouvelle sous-section:</label>
       <input required [(ngModel)]="article.subsection" type="text" class="form-control" id="subsection" name="subsection" #subsection="ngModel">
-      <!-- <div class="alert alert-danger" *ngIf="subsection.touched && !subsection.valid">
-        <div *ngIf="subsection.errors?.['required']">Sous-section requise</div>
-      </div> -->
     </div>
-
-
-
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 
