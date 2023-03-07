@@ -34,9 +34,11 @@ export class UpdateArticleComponent implements OnInit {
       error: error => console.log(error),
       next: res => this.article=res
     })
+    this.getSections();
   }
 
   onSubmit(x:any){
+    
     if(x.form.valid){
       this.saveArticle();
       this.addSection(this.article.section);
@@ -47,7 +49,9 @@ export class UpdateArticleComponent implements OnInit {
       })
     }
     x.form.controls.titre.touched=true
-    x.form.controls.theme.touched=true
+    x.form.controls.section.touched=true
+    console.log("submitting")
+    //x.form.controls.subsection.touched=true
   }
 
   saveArticle(){

@@ -14,6 +14,8 @@ import { forkJoin, Observable } from 'rxjs';
 export class CreateArticleComponent implements OnInit {
 
   article: Article = new Article();
+  selectedSection:string="choice";
+  selectedSubsection:string="choice";
 
   sections:{name:string}[]=[];
   subsections:{name:string, sectionName:string, id:number}[]=[];
@@ -25,8 +27,8 @@ export class CreateArticleComponent implements OnInit {
   ngOnInit(): void {
     this.article.content="" //error backend lors de updatearticle si null... 
     this.article.actif=false
-    // this.article.section=""
-    // this.article.subsection=""
+     this.article.section=""
+    this.article.subsection=""
 
     this.getSections();
   }
@@ -39,20 +41,29 @@ export class CreateArticleComponent implements OnInit {
       this.addSubsection(this.article.section, this.article.subsection);
       forkJoin(this.requests).subscribe({
         error: error => console.log(error),
-        next: res => this.router.navigate(['/admin/articles/actif'])
+        next: res => [console.log('ertetr'),this.router.navigate(['/admin/articles/actif'])]
       })
     }
     x.form.controls.titre.touched=true
     x.form.controls.section.touched=true
+    x.form.controls.subsection.touched=true
   }
 
-  onSelect($event: Event){
-    this.subsections=[];// pour laisser le champ select des sous-sections vide au départ
-    this.article.subsection="";
-    console.log((<HTMLTextAreaElement>$event.target).value)
-    const value:string=(<HTMLTextAreaElement>$event.target).value
-    this.getSubsection(value);
+  selectSection(){
+   // this.subsections=[];// pour laisser le champ select des sous-sections vide au départ
+    //this.article.subsection="";
+    if(this.selectedSection!="choice"){
+    this.article.section=this.selectedSection
+    //const value:string=(<HTMLTextAreaElement>$event.target).value
+    this.getSubsection(this.selectedSection);
+    }
   }
+
+  selectSubsection(){
+    if(this.selectedSubsection!="choice"){
+    this.article.subsection=this.selectedSubsection
+    }
+   }
 
   
   saveArticle(){
