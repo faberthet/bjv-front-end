@@ -12,7 +12,8 @@
     <div class="form-group mb-3">
       <label for="selection" class="form-label">Sélectionner une section</label>
       <select required [(ngModel)]="selectedSection" (change)="selectSection()"  name="selection" id="selection" class="form-select"> 
-        <option *ngIf="article.section==''"  value="choice">choisir une section</option>
+        <option value="choice">choisir une section</option>
+        <!-- <option *ngIf="article.section==''" value="choice">choisir une section</option> -->
         <ng-container *ngFor="let section of sections">
           <option value="{{section.name}}">{{section.name}}</option>
         </ng-container>
@@ -27,8 +28,8 @@
     </div>
     <div class="form-group mb-3">
       <label for="selection2" class="form-label">Sélectionner une sous-section</label>
-      <select required [(ngModel)]="selectedSubsection" (change)="selectSubsection()" name="selection2" id="selection2" class="form-select"> 
-        <option *ngIf="article.subsection==''" value="choice">choisir une sous-section</option>
+      <select [(ngModel)]="selectedSubsection" (change)="selectSubsection()" name="selection2" id="selection2" class="form-select"> 
+        <option value="choice">choisir une sous-section</option>
         <ng-container *ngFor="let subsection of subsections">
           <option value="{{subsection.name}}">{{subsection.name}}</option>
         </ng-container>
@@ -36,7 +37,7 @@
     </div>
     <div class="form-group mb-3">
       <label for="subsection" class="form-label">ou créer une nouvelle sous-section:</label>
-      <input required [(ngModel)]="article.subsection" type="text" class="form-control" id="subsection" name="subsection" #subsection="ngModel">
+      <input [(ngModel)]="article.subsection" type="text" class="form-control" id="subsection" name="subsection" #subsection="ngModel">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

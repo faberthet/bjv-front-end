@@ -33,7 +33,6 @@ export class CreateArticleComponent implements OnInit {
     this.getSections();
   }
 
-
   onSubmit(x:any){
     if(x.form.valid){
       this.saveArticle();
@@ -46,12 +45,12 @@ export class CreateArticleComponent implements OnInit {
     }
     x.form.controls.titre.touched=true
     x.form.controls.section.touched=true
-    x.form.controls.subsection.touched=true
   }
 
   selectSection(){
    // this.subsections=[];// pour laisser le champ select des sous-sections vide au départ
     //this.article.subsection="";
+    console.log("123456")
     if(this.selectedSection!="choice"){
     this.article.section=this.selectedSection
     //const value:string=(<HTMLTextAreaElement>$event.target).value
@@ -90,15 +89,16 @@ export class CreateArticleComponent implements OnInit {
 
   addSubsection(section:string,subsection:string){
 
-    let addsubsection:Boolean=true
-
-    this.subsections.forEach( (value) => {
-      if(value.name==subsection){ //si la sous-section existe deja..
-        addsubsection=false
+    if (subsection!=""){
+      let addsubsection:Boolean=true
+      this.subsections.forEach( (value) => {
+        if(value.name==subsection){ //si la sous-section existe deja..
+          addsubsection=false
+        }
+      })
+      if(addsubsection){ //si la sous-section n'existe pas encore
+        this.requests.push(this.articleService.addSubsection({name:subsection, sectionName:section}))
       }
-    })
-    if(addsubsection){ //si la sous-section n'existe pas encore
-      this.requests.push(this.articleService.addSubsection({name:subsection, sectionName:section}))
     }
   }
 
@@ -118,6 +118,8 @@ export class CreateArticleComponent implements OnInit {
       ]
     })
   }
+
+
 
 //   public Editor = CustomEditor;
 //   public config={

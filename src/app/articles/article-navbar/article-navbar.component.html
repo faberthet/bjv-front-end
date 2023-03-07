@@ -33,10 +33,10 @@
           </div></li>
         </ng-container>
         <ng-container *ngIf='sectionChild.type=="article"'>
-          <ng-container *ngIf='sectionChild.article?.actif'>
+          <!-- <ng-container *ngIf='sectionChild.article?.actif'> -->
           <li><div class="article-name"><a routerLink="/articles/{{sectionChild.article?.id}}">{{sectionChild.article?.titre}}</a></div></li>
           </ng-container>
-        </ng-container>
+        <!-- </ng-container> -->
 
       </ul> 
   </mat-expansion-panel>

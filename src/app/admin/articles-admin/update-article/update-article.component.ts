@@ -17,6 +17,9 @@ export class UpdateArticleComponent implements OnInit {
   private id: number=this.route.snapshot.params['id']
   public Editor = CustomEditor;
 
+  selectedSection:string="";
+  selectedSubsection:string="choice";
+
   sections:{name:string}[]=[];
   subsections:{name:string, sectionName:string, id:number}[]=[];
   requests:Observable<Object>[]=[];
@@ -50,8 +53,6 @@ export class UpdateArticleComponent implements OnInit {
     }
     x.form.controls.titre.touched=true
     x.form.controls.section.touched=true
-    console.log("submitting")
-    //x.form.controls.subsection.touched=true
   }
 
   saveArticle(){
@@ -72,32 +73,42 @@ export class UpdateArticleComponent implements OnInit {
      }
    }
  
-   addSubsection(section:string,subsection:string){
- 
-     let addsubsection:Boolean=true
- 
-     this.subsections.forEach( (value) => {
-       if(value.name==subsection){ //si la sous-section existe deja..
+  addSubsection(section:string,subsection:string){
+    if (subsection!=""){
+      let addsubsection:Boolean=true
+      this.subsections.forEach( (value) => {
+        if(value.name==subsection){ //si la sous-section existe deja..
          addsubsection=false
-       }
-     })
-     if(addsubsection){ //si la sous-section n'existe pas encore
-       this.requests.push(this.articleService.addSubsection({name:subsection, sectionName:section}))
+        }
+      })
+      if(addsubsection){ //si la sous-section n'existe pas encore
+        this.requests.push(this.articleService.addSubsection({name:subsection, sectionName:section}))
+      }
+    }
+  }
+
+  selectSection(){
+     console.log("123456")
+     if(this.selectedSection!="choice"){
+     this.article.section=this.selectedSection
+     this.getSubsection(this.selectedSection);
      }
    }
-
-  onSelect($event: Event){
-    this.subsections=[];// pour laisser le champ select des sous-sections vide au départ
-    this.article.subsection="";
-    console.log((<HTMLTextAreaElement>$event.target).value)
-    const value:string=(<HTMLTextAreaElement>$event.target).value
-    this.getSubsection(value);
-  }
+ 
+   selectSubsection(){
+     if(this.selectedSubsection!="choice"){
+     this.article.subsection=this.selectedSubsection
+     }
+    }
 
   getSections(){
     this.articleService.getSections().subscribe({
       error: error => console.log(error),
-      next: res => [this.sections=<{name:string}[]>res,console.log(this.sections)]
+      next: res => [
+        this.sections=<{name:string}[]>res,
+        this.selectedSection=this.article.section,
+        this.getSubsection(this.selectedSection)
+      ]
     })
   }
 
