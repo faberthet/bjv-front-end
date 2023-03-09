@@ -32,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { ArticlesActifComponent } from './admin/articles-admin/articles-actif/articles-actif.component';
 import { ArticlesInactifComponent } from './admin/articles-admin/articles-inactif/articles-inactif.component';
+import { SubsectionNavComponent } from './articles/article-navbar/subsection-nav/subsection-nav.component';
 //import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
@@ -56,6 +57,7 @@ import { ArticlesInactifComponent } from './admin/articles-admin/articles-inacti
     LogoutComponent,
     ArticlesActifComponent,
     ArticlesInactifComponent,
+    SubsectionNavComponent,
     
 
   ],

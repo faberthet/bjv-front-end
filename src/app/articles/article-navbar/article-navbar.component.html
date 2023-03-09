@@ -25,12 +25,13 @@
 
       <ul *ngFor="let sectionChild of section.children">
         <ng-container *ngIf='sectionChild.type=="subsection"'>
-          <li><div>{{sectionChild.subsection?.name}}
+          <app-subsection-nav [subsection]="sectionChild.subsection"></app-subsection-nav>
+          <!-- <li><div>{{sectionChild.subsection?.name}}
             <ul *ngFor="let article of sectionChild.subsection?.articles">
               <li><div class="article-name"><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
             </ul>
 
-          </div></li>
+          </div></li> -->
         </ng-container>
         <ng-container *ngIf='sectionChild.type=="article"'>
           <!-- <ng-container *ngIf='sectionChild.article?.actif'> -->

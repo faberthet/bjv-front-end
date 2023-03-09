@@ -1,0 +1,14 @@
+<li>
+  <div>
+    <div class="title" (click)="toggle()">
+       <fa-icon [icon]="faAngleRight" *ngIf="display==false"></fa-icon>
+       <fa-icon [icon]="faAngledown" *ngIf="display==true"></fa-icon>
+       {{subsection?.name}}
+    </div>
+    <ul *ngIf="display">
+      <ng-container *ngFor="let article of subsection?.articles">
+      <li><div class="article-name"><a routerLink="/articles/{{article.id}}">{{article.titre}}</a></div></li>
+    </ng-container>
+    </ul>
+  </div>
+</li>
