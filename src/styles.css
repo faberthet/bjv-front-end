@@ -12,12 +12,21 @@
     display: block;
     margin-top: 0; 
  }  */
+:root{
+   --bgcolor2:darkred;
+   --bgcolor2bis:rgb(116, 0, 0);
+   --bgcolor1:palegoldenrod;
+   /* background-color: */
+/* rgb(180, 72, 72);*/
+/* rgb(255, 233, 233) */
+}
 
 body{
-    background-image: url('src/assets/images/acc2.jpg'); 
+    /* background-image: url('src/assets/images/acc2.jpg');  */
+    background-color: var(--bgcolor1);
     background-size: cover;
     background-attachment: fixed;  
-  
+ 
     
 
 }

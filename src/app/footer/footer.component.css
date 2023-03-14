@@ -2,10 +2,13 @@ footer{
     width: 100%;
     margin-bottom: 0;
     padding: 40px 0;
-    background-color:rgb(31, 78, 31);
+    /* background-color:rgb(31, 78, 31); */
+    
     text-align: center;
     color: aliceblue;
      /* position: absolute;
     bottom: 0;  */
+    background-color:var(--bgcolor2bis);
+    
  }   
  

@@ -1,8 +1,6 @@
 nav{
-    background-color:rgba(31, 78, 31,0.65);
-    font-weight: bold;
-    /* border-top: 2px solid rgb(31, 78, 31);
-    border-bottom: 2px solid rgb(31, 78, 31); */
+   font-weight: bold;
+    background-color:var(--bgcolor2);
  }
  .bjv{
    font-weight: 500;
