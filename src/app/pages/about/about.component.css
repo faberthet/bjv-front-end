@@ -1,5 +1,21 @@
 
-.mainabout{
+
+.container{
+   width: 70%;
+   margin: 60px auto;
+   padding: 10px;
+   border: solid 5px var(--bgcolor2);
+   border-radius: 10px;
+   /* position: absolute;
+   bottom: -60px;
+   right: 0;
+   z-index: 4; */
+   font-size: 1.2rem;
+   background-color: var(--bgcolor1);
+}
+
+
+ /* .mainabout{
 
    width: 85%;
    max-width: 1320px;
@@ -22,26 +38,18 @@
 
 .about{
     padding: 30px 25px;
-    /* background-color:cadetblue; */
-     /* background-color: darkseagreen; */
-    /* background-color:khaki; */
-    /* background-color: lightgoldenrodyellow; */
-     /* background-color: lightyellow; */
+    border: solid 5px var(--bgcolor2);
      background-color: palegoldenrod; 
     position: absolute;
     width: 600px;
     left: 50%;
     transform: translateX(-50%);
     top: -100px;
-    /* margin-top: 3rem; */
     border-radius: 10px;
     font-family: sans-serif;
-    /* box-shadow: -1px 1px 60px 10px black; */
-    /* border: 3px solid black; */
  }
 
  .about>hr{
-   /* width: 50%; */
    margin: 1rem auto;
    color: black;
    height: 1px;
@@ -71,4 +79,4 @@
       height: auto;
       width: 75%;
    }
- }
+ }  */

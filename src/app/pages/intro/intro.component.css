@@ -4,8 +4,9 @@
       /* background-color: palegoldenrod;  */
       position: absolute;
       width: 500px;
-       left: 100px; 
-      margin-top: 3rem;
+      top: 60px; 
+      left: 100px;
+      /* margin-top: 3rem; */
       border-radius: 10px;
       font-family: sans-serif;
       z-index: 1;
