@@ -1,15 +1,21 @@
 .containerForm{
+    margin: 0 auto ;
     margin-top: 70px;
+    width: 60%;
+    
 }
 .formBox{
-    box-shadow: -1px 1px 60px 10px black;
-    background-color: rgba(0, 0, 0, 0.404);
-    width: 75%;
+    /* box-shadow: -1px 1px 60px 10px black;
+    background-color: rgba(0, 0, 0, 0.404); */
+    background-color:var(--bgcolor1);
+    border: solid 5px var(--bgcolor2);
+    border-radius: 10px;
+    width: 100%;
     margin: auto;
     padding: 20px;
 }
 .titreForm{
-    color: aliceblue;
+   
     font-family: sans-serif;
     border-radius: 10px;
 }
@@ -23,7 +29,7 @@
 .form-control{
     font-size: 1.1rem;
     background:transparent;
-    color: white;
+    
     
     /* border: 0px;
     border-bottom: 1px solid white;
@@ -35,9 +41,11 @@
 
 input{
     height: 45px;
+    border: solid 2px var(--bgcolor2);
 }
 textarea{
     height: 90px;
+    border: solid 2px var(--bgcolor2);
 }
 .buttonForm{
     /* text-align: center; */
@@ -63,7 +71,7 @@ font-size: 1.1rem;
 /* ////// gestion footer ////// */
 .containerForm{
     margin-bottom: 100px;
-    color: white;
+    
 }
 @media only screen and (max-width: 991px) {
     .containerForm{
@@ -75,7 +83,7 @@ font-size: 1.1rem;
 
 @media only screen and (max-width: 991px) {
     .formBox{
-        width: 90%;
+        /* width: 90%; */
     }
 }
 @media only screen and (max-width: 500px) {
