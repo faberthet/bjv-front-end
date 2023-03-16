@@ -37,14 +37,14 @@ a{
   text-decoration: inherit;
 }
 mat-expansion-panel-header{
-    background-color: rgba(31, 78, 31,0.65) !important; 
+    /* background-color: var(--bgcolor2) !important;  */
     min-height: 50px;
     height: min-content;
     font-weight: 500;
-   
+   border: solid 1px var(--bgcolor2);
 }
 mat-expansion-panel-header:hover{
-    background-color:rgba(31, 78, 31,0.85) !important
+    background-color:rgb(255, 249, 179) !important
    
 }
   /* .meph:hover{
