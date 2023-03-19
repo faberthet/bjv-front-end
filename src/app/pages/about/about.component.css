@@ -13,7 +13,11 @@
    font-size: 1.2rem;
    background-color: var(--bgcolor1);
 }
-
+@media only screen and (max-width: 991px) {
+   .container{
+      width: calc(75% - 30px);
+   }
+}
 
  /* .mainabout{
 
@@ -61,7 +65,7 @@
      height: 500px; 
   } 
 }
-
+ 
  @media only screen and (max-width: 991px) {
     .about{
          transform: none;
@@ -79,4 +83,4 @@
       height: auto;
       width: 75%;
    }
- }  */
+ } */

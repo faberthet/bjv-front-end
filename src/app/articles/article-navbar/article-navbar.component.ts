@@ -51,16 +51,18 @@ export class ArticleNavbarComponent implements OnInit {
 
   toSectionTable(articles:ArticleWithoutContent[]){
     articles.forEach((article)=>{
-      if(!this.isSectionInSections(article.section)){ //si section déjà dans sections
-          this.createSection(article.section)
-      }  
-      if(article.subsection==""){ //si l'article n'est pas dans une sous-section
-          this.pushArticleToSection(article.section,article)
-      }else{ //si l'article est dans une sous-section
-        if(!this.isSubSectionInSection(article.section,article.subsection)){ //si la sous-section n'est pas encore dans la section
-          this.addSubSectionToSection(article.section,article.subsection)
+      if(article.actif==true){
+        if(!this.isSectionInSections(article.section)){ //si section déjà dans sections
+            this.createSection(article.section)
+        }  
+        if(article.subsection==""){ //si l'article n'est pas dans une sous-section
+            this.pushArticleToSection(article.section,article)
+        }else{ //si l'article est dans une sous-section
+          if(!this.isSubSectionInSection(article.section,article.subsection)){ //si la sous-section n'est pas encore dans la section
+            this.addSubSectionToSection(article.section,article.subsection)
+          }
+          this.pushArticleToSubSection(article.section, article.subsection,article)
         }
-        this.pushArticleToSubSection(article.section, article.subsection,article)
       }
     })
   }

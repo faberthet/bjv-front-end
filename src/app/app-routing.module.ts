@@ -36,8 +36,8 @@ const routes: Routes = [
   {path: 'admin/articles/details/:id', component: ArticleViewComponent, canActivate:[AuthGuardService]},
   {path: 'login', component: LoginComponent},
   {path: 'logout', component: LogoutComponent},
-  {path: 'articles/:id', component: ArticlesComponent}
-  
+  {path: 'articles/:id', component: ArticlesComponent},
+  {path: 'articles',   redirectTo: '/articles/1'}//, pathMatch: 'full' }
 ];
 
 @NgModule({
