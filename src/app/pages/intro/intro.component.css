@@ -53,11 +53,26 @@
         background-color:forestgreen;
      }
      
- @media only screen and (max-width: 1515px) {
+ @media only screen and (max-width: 1800px) {
      .texte1{
        left:0;
     } 
   }
+  @media only screen and (max-width: 1660px) {
+   .texte1{
+     left:-80px;
+  } 
+}
+@media only screen and (max-width: 1520px) {
+   .texte1{
+     left:-130px;
+  } 
+}
+@media only screen and (max-width: 1270px) {
+   .texte1{
+     left:-80px;
+  } 
+}
   @media only screen and (max-width: 991px) {
     .texte1{
         text-align:initial;
