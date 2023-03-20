@@ -1,21 +1,31 @@
 
 
-.container{
-   width: 60%;
+.container-about{
+   width: 70%;
    margin: 60px auto;
    padding: 15px;
    border: solid 5px var(--bgcolor2);
    border-radius: 10px;
-   /* position: absolute;
-   bottom: -60px;
-   right: 0;
-   z-index: 4; */
    font-size: 1.2rem;
    background-color: var(--bgcolor1);
 }
-@media only screen and (max-width: 991px) {
+
+/* @media only screen and (max-width: 1644px) {
    .container{
-      width: calc(75% - 30px);
+      width: 75%;
+   }
+} */
+@media only screen and (max-width: 1270px) {
+   .container-about{
+      width: 80%;
+   }
+}
+
+@media only screen and (max-width: 991px) {
+ 
+   .container-about{
+      margin: 2rem auto;
+      /* width: 95%; */
    }
 }
 
