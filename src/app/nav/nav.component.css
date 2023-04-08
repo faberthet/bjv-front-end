@@ -1,6 +1,7 @@
 nav{
    font-weight: bold;
     background-color:var(--bgcolor2);
+    padding: 0 !important;
  }
  .bjv{
    font-weight: 500;
@@ -10,15 +11,23 @@ nav{
  }
  a{
    color: rgb(236, 185, 185) !important;
+   padding: 3px 0;
  }
  a:hover{
    color: rgb(255, 255, 255) !important;
+ }
+ .navbar-toggler{
+   padding: 3px 9px !important;
+   font-size: 1rem;
+   border: 2px solid ;
  }
 
  @media only screen and (max-width: 991px) {
     nav{
        margin-bottom: 0;
+       padding: 2px 0 !important;
     }
+    
  }
  @media only screen and (max-width: 323px) {
     .bjv{
