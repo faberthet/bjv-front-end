@@ -74,7 +74,7 @@
  } 
  @media only screen and (max-width: 1120px) {
    .content-cadre{
-     width: 950px;
+     width: 100%;
   } 
   .main1{
    height: 430px;
@@ -82,11 +82,14 @@
 }
  
   @media only screen and (max-width: 991px) {
+   .content-cadre{
+      padding-top: 2rem ;
+      padding-bottom: 2rem ;
+   }
      .main1{
        position:static;
        height: auto;
        text-align: center;
-       margin-top: 2rem;
        margin-bottom: 2rem;
        
     }
