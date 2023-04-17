@@ -13,18 +13,20 @@
     margin-top: 0; 
  }  */
 :root{
+   /* --bgcolor2:darkred;
+   --bgcolor2light:rgb(177, 0, 0);
+   --bgcolor2bis:rgb(116, 0, 0);
+   --bgcolor1:palegoldenrod; */
    --bgcolor2:darkred;
    --bgcolor2light:rgb(177, 0, 0);
    --bgcolor2bis:rgb(116, 0, 0);
    --bgcolor1:palegoldenrod;
-   /* background-color: */
-/* rgb(180, 72, 72);*/
-/* rgb(255, 233, 233) */
+   color:white
 }
 
 body{
-    /* background-image: url('src/assets/images/acc2.jpg');  */
-    background-color: var(--bgcolor1);
+     background-image: url('src/assets/images/bg.jpg');  
+    /* background-color: var(--bgcolor1); */
     background-size: cover;
     background-attachment: fixed;  
  

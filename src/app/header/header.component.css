@@ -1,9 +1,9 @@
 .header{
     height: 190px;
     width: 100%;
-    background-image: url('src/assets/images/body2.jpg');
+    /* background-image: url('src/assets/images/body2.jpg');
     background-position: right;
-    background-size: cover;
+    background-size: cover; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@
       align-items: center;
       background-color: rgba(255, 255, 255, 0.514);
       text-shadow: 1px 1px 2px rgb(0, 0, 0);
-     
+      
   }
   .flag{
       height: 75px;
