@@ -68,7 +68,7 @@
         background-color:forestgreen;
      }
      
- @media only screen and (max-width: 1800px) {
+ /* @media only screen and (max-width: 1800px) {
      .texte1{
        left:0;
     } 
@@ -87,7 +87,7 @@
    .texte1{
      left:-80px;
   } 
-}
+} */
   @media only screen and (max-width: 991px) {
     .texte1{
         text-align:initial;
