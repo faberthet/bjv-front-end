@@ -1,8 +1,8 @@
 
 
 .container-about{
-   width: 70%;
-   margin: 60px auto;
+   width: 80%;
+   margin: 0 auto;
    padding: 15px;
    border: solid 5px var(--bgcolor2);
    border-radius: 10px;
