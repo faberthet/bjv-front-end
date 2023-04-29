@@ -1,6 +1,6 @@
 .containerForm{
     margin: 0 auto ;
-    width: 80%;
+    width: var(--size1);
 }
 .formBox{
     /* box-shadow: -1px 1px 60px 10px black;
@@ -68,9 +68,9 @@ font-size: 1.1rem;
 }
 
 @media only screen and (max-width: 1270px) {
-    .containerForm{
+    /* .containerForm{
        width: 80%;
-    }
+    } */
  }
 
 @media only screen and (max-width: 991px) {

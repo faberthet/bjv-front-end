@@ -1,7 +1,7 @@
 
 
 .container-about{
-   width: 80%;
+   width: var(--size1);
    margin: 0 auto;
    padding: 15px;
    border: solid 5px var(--bgcolor2);
