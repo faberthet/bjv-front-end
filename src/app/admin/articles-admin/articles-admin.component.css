@@ -1,8 +1,10 @@
 .bgwhite{
     background-color: aliceblue;
+    margin: 0 auto;
     margin-top: 10px;
- 
-    
+    min-height: 1200px;
+    width: 95%;
+    padding: 5px;
 }
 h2{
     text-align: center;
