@@ -22,12 +22,14 @@
    --bgcolor2bis:rgb(116, 0, 0);
    --bgcolor1:palegoldenrod;
    --size1: 80%;
-   color:white
+   color:#ffffff;
+   color:white;
 }
 
 body{
-     background-image: url('src/assets/images/bg.jpg');  
+     background-image: url('src/assets/images/bg13.jpg');  
     /* background-color: var(--bgcolor1); */
+   
     background-size: cover;
     background-attachment: fixed;  
  
