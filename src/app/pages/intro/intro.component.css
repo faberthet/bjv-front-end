@@ -1,45 +1,31 @@
     
    .texte1{
-     
-      /* background-color: palegoldenrod;  */
+   
       position: absolute;
-      width: 600px;
-       /* height: 450px; */
-      top: 40px; 
+      width: 500px;
+      top: 60px; 
       left: 0; 
-      /* margin-top: 3rem; */
       border-radius: 10px;
       font-family: sans-serif;
       z-index: 1; 
-      color: rgb(255, 255, 255);
-      
-      /* background-color: var(--bgcolor2); */
-      /* background-color: var(--bgcolor1); */
-
-      border: solid 5px black;
-      background-image: url('src/assets/images/bg3.jpg');
-      
-      background-size: cover;
+      border: solid 5px var(--bgcolor2);
+      /* background-image: url('src/assets/images/bg3.jpg'); */
+      /* background-size: cover; */
       margin: 0 auto;
-      text-shadow: 2px 2px 4px rgb(0, 0, 0);
+      /* text-shadow: 2px 2px 4px rgb(0, 0, 0); */
+      background-color: var(--bgcolor1);
    }
    .cadre1{
-      
       border-radius: 10px;
       height: 100%;
       width: 100%;
-      position: relative;
-      /* padding: 60px; */
+      /* position: relative; */
+      padding: 60px;
       padding-top: 30px;
-      padding-bottom: 70px ;
+  
      /* background: linear-gradient(115deg,rgba(0, 0, 0, 0.400) 50%,transparent); */
-    /* background-color: rgba(0, 0, 0, 0.37); */
-    /* background-color: transparent; */
-    /* background-color: rgba(0, 0, 0, 0.349); */
     
    } 
-
-
    .imgback{
       border-radius: 10px;
       /* border: solid 5px var(--bgcolor2); */
@@ -54,7 +40,7 @@
       z-index: -1;
    }
    ul{
-      font-size: 1.5rem;
+      font-size: 1.3rem;
    }
    li{
       margin-bottom: 5px;
@@ -98,14 +84,23 @@
   } 
 } */
   @media only screen and (max-width: 991px) {
-    .texte1{
-        text-align:initial;
+     .texte1{
+         /* text-align:initial;
         position: static;
-        margin: 2rem auto;
-        width: 100%; 
-        border: none;
-        background-color: transparent;
+        margin: 2rem auto; */
+        /* width: 100%;  */
+       /* bottom: -50%; */
+       top:-100px; 
+       /* bottom: -80px; */
+       left: 50%;
+       transform: translateX(-50%);
+       
+
      }
+     /* .cadre1{
+      padding-left: 90px;
+      padding-right: 90px;
+     } */
      .imgback{
       z-index: index none;
      }

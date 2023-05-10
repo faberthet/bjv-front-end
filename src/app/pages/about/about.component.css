@@ -4,7 +4,7 @@
    width: var(--size1);
    margin: 0 auto;
    padding: 15px;
-   border: solid 5px var(--bgcolor2);
+   /* border: solid 5px var(--bgcolor2); */
    border-radius: 10px;
    font-size: 1.2rem;
    background-color: var(--bgcolor1);
