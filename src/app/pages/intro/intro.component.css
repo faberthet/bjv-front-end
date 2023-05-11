@@ -8,12 +8,13 @@
       border-radius: 10px;
       font-family: sans-serif;
       z-index: 1; 
-      border: solid 5px var(--bgcolor2);
-      /* background-image: url('src/assets/images/bg3.jpg'); */
-      /* background-size: cover; */
+      /* border: solid 5px var(--bgcolor2); */
+      border: solid 5px var(--bgcolor3);
+      background-image: url('src/assets/images/bg4.jpg');
+       background-size: cover;
       margin: 0 auto;
       /* text-shadow: 2px 2px 4px rgb(0, 0, 0); */
-      background-color: var(--bgcolor1);
+      /* background-color: var(--bgcolor1); */
    }
    .cadre1{
       border-radius: 10px;

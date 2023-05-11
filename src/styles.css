@@ -17,18 +17,21 @@
    --bgcolor2light:rgb(177, 0, 0);
    --bgcolor2bis:rgb(116, 0, 0);
    --bgcolor1:palegoldenrod; */
-   --bgcolor2:darkred;
+   /* --bgcolor2:darkred; */
+   --bgcolor2:rgb(0, 0, 0);
    --bgcolor2light:rgb(177, 0, 0);
-   --bgcolor2bis:rgb(116, 0, 0);
+   /* --bgcolor2bis:rgb(116, 0, 0); */
+   --bgcolor2bis:rgba(0, 0, 0, 0.5);
    --bgcolor1:palegoldenrod;
    --bgcolor1t:rgba(238, 232, 170, 0.801);
+   --bgcolor3: ;
    --size1: 100%;
    color:#ffffff;
-   color:white;
+   color:green;
 }
 
 body{
-     background-image: url('src/assets/images/bg13.jpg');  
+     background-image: url('src/assets/images/bg14.jpg');  
     /* background-color: var(--bgcolor1); */
    
     background-size: cover;
