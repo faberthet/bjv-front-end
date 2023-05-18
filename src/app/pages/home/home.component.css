@@ -1,11 +1,13 @@
 
 .content-cadre{
    width: 1100px; 
-   background-color: rgba(0, 0, 0, 0.397);
+   background-color: var(--bgcolormain);
+   /* background-color: rgba(30, 128, 46, 0.438); */
    margin: 0 auto;
    margin-bottom: 30px;
-   border-radius: 10px;
+   /* border-radius: 10px; */
    padding: 10px;
+   padding-top: 0;
   /* background-image: url('src/assets/images/bg4.jpg');
        background-size: cover; */
 }
@@ -28,6 +30,10 @@
     .intro-img2{
        display: none;
        border-radius: 10px;
+    }
+
+    .title{
+      position: absolute;
     }
 
 .separation{

@@ -18,6 +18,7 @@
    --bgcolor2bis:rgb(116, 0, 0);
    --bgcolor1:palegoldenrod; */
    /* --bgcolor2:darkred; */
+   --bgcolormain:white;
    --bgcolor2:rgb(0, 0, 0);
    --bgcolor2light:rgb(177, 0, 0);
    /* --bgcolor2bis:rgb(116, 0, 0); */
@@ -31,7 +32,7 @@
 }
 
 body{
-     background-image: url('src/assets/images/bg9.jpg');  
+     background-image: url('src/assets/images/bg12.jpg');  
     /* background-color: var(--bgcolor1); */
    
     background-size: cover;

@@ -5,10 +5,13 @@ footer{
     /* background-color:rgb(31, 78, 31); */
     
     text-align: center;
-    color: aliceblue;
+    /* color: white; */
      /* position: absolute;
     bottom: 0;  */
-    background-color:var(--bgcolor2bis);
-    
+    background-color:rgb(26, 92, 37);
+    background-color:rgb(22, 75, 30);
+    /* background-image: url('src/assets/images/bg8.jpg') ; */
+    background-size: cover;
+    color: white;
  }   
  
