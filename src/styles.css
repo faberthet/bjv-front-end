@@ -32,8 +32,8 @@
 }
 
 body{
-     background-image: url('src/assets/images/bg12.jpg');  
-    /* background-color: var(--bgcolor1); */
+   background-image: url('src/assets/images/bg12.jpg');  
+   /* background-color: black; */
    
     background-size: cover;
     background-attachment: fixed;  
