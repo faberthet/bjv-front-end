@@ -30,8 +30,8 @@
       align-items: center;
     
       /* background-color: rgba(255, 255, 255, 0.322); */
-      color: rgb(36, 122, 55);
-      /* color: rgb(0, 0, 0); */
+      /* color: rgb(36, 122, 55); */
+      color: rgb(0, 0, 0);
       text-shadow: 1px 1px 2px rgb(0, 0, 0);
       
   }
