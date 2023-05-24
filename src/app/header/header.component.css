@@ -22,11 +22,13 @@
       width: max-content;
       height: max-content;
       margin: 0 auto;
-      /* padding: 3px; */
+      
       display: flex;
-      flex-direction: column;
-      /* border: solid 3px rgb(0, 0, 0);
-      border-radius: 10px; */
+      /* flex-direction: column; */
+      /* border: solid 2px rgb(0, 0, 0); */
+      /* border-radius: 10px;
+      padding: 6px;
+      background-color:rgb(193, 214, 193); */
       align-items: center;
     
       /* background-color: rgba(255, 255, 255, 0.322); */
@@ -34,7 +36,21 @@
       color: rgb(0, 0, 0);
       text-shadow: 1px 1px 2px rgb(0, 0, 0);
       
+      
   }
+
+  .leaf{
+    /* height: 26px;
+    width: auto; */
+    margin-right: 8px;
+  }
+/* 
+  .jv{
+    background-color: darkgreen;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+  } */
  
  
 
