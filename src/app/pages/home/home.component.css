@@ -12,13 +12,36 @@
        background-size: cover; */
 }
 .main1{
+  /* padding-left: 30px; */
+  width: var(--size1);
+  max-width: 1320px;
+  height:350px;
+  margin: 0 auto;
+  /* position: relative; */
+  background-image: url('src/assets/images/acc4.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 90px ;
+}
 
-    width: var(--size1);
-    max-width: 1320px;
-    height:550px;
-    margin: 0 auto;
-    position: relative;
-
+    .description{
+      /* position: absolute;
+      bottom: 50%;
+      transform: translateY(50%);
+      left: 100px; */
+      /* left: 50%;
+      transform: translateX(-50%); */
+      
+      width: 60%;
+      color: white;
+      font-weight:500;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 48px;
+      line-height: 50px;
+      /* text-align: justify; */
+      /* background-color: rgba(0, 0, 0, 0.705); */
     }
     
     .intro-img{
@@ -49,8 +72,19 @@
    .content-cadre{
      width: 95%;
   } 
+ }
+  @media only screen and (max-width: 1080px) {
+   .description{
+     font-size: 42px;
+  } 
+}
+   @media only screen and (max-width: 1005px) {
+  .main1{
+    padding: 60px;
+  }
 
 }
+
  
   @media only screen and (max-width: 991px) {
    .content-cadre{
@@ -61,7 +95,7 @@
    }
      .main1{
        /* position:static; */
-       height: auto;
+       /* height: auto; */
        /* text-align: center; */
        margin-bottom: 1rem;
        /* margin-top: 100px; */
@@ -81,6 +115,24 @@
  
     }
  }
+
+ @media only screen and (max-width: 920px) {
+  .main1{
+    padding: 30px;
+  }
+
+}
+
+
+ @media only screen and (max-width: 822px) {
+  .description{
+    font-size: 36px;
+    
+ } 
+
+
+}
+
  @media only screen and (max-width: 750px) {
    .content-cadre{
       padding-top: 0 ;
@@ -90,6 +142,34 @@
       margin-bottom: 1rem;
    }
  }
+
+ @media only screen and (max-width: 730px) {
+  .description{
+    font-size: 32px;
+ } 
+
+}
+
+@media only screen and (max-width: 665px) {
+  .description{
+    font-size: 28px;
+ } 
+
+}
+@media only screen and (max-width: 600px) {
+  .description{
+    font-size: 28px;
+ } 
+
+}
+
+@media only screen and (max-width: 560px) {
+  .description{
+    font-size: 24px;
+ } 
+
+}
+
 
  .alerte1{
    background-color:lightpink;
