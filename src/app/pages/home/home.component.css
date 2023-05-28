@@ -15,7 +15,7 @@
   /* padding-left: 30px; */
   width: var(--size1);
   max-width: 1320px;
-  height:350px;
+  height:550px;
   margin: 0 auto;
   /* position: relative; */
   background-image: url('src/assets/images/acc4.jpg');
@@ -27,21 +27,14 @@
 }
 
     .description{
-      /* position: absolute;
-      bottom: 50%;
-      transform: translateY(50%);
-      left: 100px; */
-      /* left: 50%;
-      transform: translateX(-50%); */
+
       
       width: 60%;
       color: white;
       font-weight:500;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 48px;
-      line-height: 50px;
-      /* text-align: justify; */
-      /* background-color: rgba(0, 0, 0, 0.705); */
+      font-size: 44px;
+      /* line-height: 50px; */
     }
     
     .intro-img{
@@ -118,7 +111,7 @@
 
  @media only screen and (max-width: 920px) {
   .main1{
-    padding: 30px;
+    /* padding: 30px; */
   }
 
 }
@@ -129,7 +122,10 @@
     font-size: 36px;
     
  } 
-
+ .main1{
+  
+  height: 350px;
+ }
 
 }
 
@@ -152,8 +148,9 @@
 
 @media only screen and (max-width: 665px) {
   .description{
-    font-size: 28px;
+    width: 60%;
  } 
+ 
 
 }
 @media only screen and (max-width: 600px) {
@@ -165,8 +162,20 @@
 
 @media only screen and (max-width: 560px) {
   .description{
-    font-size: 24px;
+    font-size: 28px;
  } 
+
+
+}
+
+@media only screen and (max-width: 450px) {
+  .description{
+    text-align: center;
+ } 
+ .main1{
+  justify-content:center;
+  padding: 0;
+ }
 
 }
 

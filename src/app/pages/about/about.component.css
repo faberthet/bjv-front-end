@@ -9,7 +9,25 @@
    font-size: 1.2rem;
    background-color: var(--bgcolor1);
 }
-
+h3{
+   text-align: center;
+}
+.about{
+   width: var(--size1);
+   height: 550px;
+   background-image: url('src/assets/images/acc4mir.jpg');
+   background-size: cover;
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   padding-right: 60px;
+}
+p{
+   width: 50%;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 26px;
+}
 /* @media only screen and (max-width: 1644px) {
    .container{
       width: 75%;
