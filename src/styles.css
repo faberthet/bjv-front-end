@@ -18,8 +18,9 @@
    --bgcolor2bis:rgb(116, 0, 0);
    --bgcolor1:palegoldenrod; */
    /* --bgcolor2:darkred; */
-   --bgcolormain:white;
+   --bgcolormain:rgb(255, 255, 255);
    --bgcolor2:rgb(0, 0, 0);
+
    --bgcolor2light:rgb(177, 0, 0);
    /* --bgcolor2bis:rgb(116, 0, 0); */
    --bgcolor2bis:rgba(0, 0, 0, 0.5);
@@ -30,13 +31,13 @@
    --bgcolor3:black ;
    --size1: 100%;
    color:#ffffff;
-   color:green;
+   color:saddlebrown;
 }
 
 body{
-   background-image: url('src/assets/images/bg12.jpg');  
+   background-image: url('src/assets/images/acc3.jpg');  
    /* background-color: black; */
-   
+   /* background-size: 2000px; */
     background-size: cover;
     background-attachment: fixed;  
  

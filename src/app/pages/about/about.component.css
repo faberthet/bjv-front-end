@@ -15,7 +15,7 @@ h3{
 .about{
    width: var(--size1);
    height: 550px;
-   background-image: url('src/assets/images/acc4mir.jpg');
+   /* background-image: url('src/assets/images/acc4mir.jpg'); */
    background-size: cover;
    display: flex;
    justify-content: right;

@@ -1,13 +1,14 @@
 .header{
     /* height: 190px; */
     width: 1100px;
+    /* width: 100%; */
     /* background-image: url('src/assets/images/body2.jpg');
     background-position: right;
     background-size: cover; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* background-color: rgb(255, 255, 255); */
+    
     background-color:rgb(255, 255, 255);
     margin: 0 auto;
    
