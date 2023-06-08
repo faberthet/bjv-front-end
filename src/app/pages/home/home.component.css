@@ -18,18 +18,18 @@
   height:550px;
   margin: 0 auto;
   /* position: relative; */
-  background-image: url('src/assets/images/acc4.jpg');
+  background-image: url('src/assets/images/acc3.jpg');
   background-size: cover;
   /* background-position: bottom; */
   display: flex;
-  align-items:center;
-  /* justify-content:right; */
-  padding: 90px ;
+  align-items:flex-end;
+  justify-content:center;
+  padding-bottom: 90px ;
 }
 
     .description{
 
-      
+      text-align: center;
       width: 60%;
       color: white;
       /* color: rgb(129, 187, 129); */
@@ -71,12 +71,18 @@
  }
   @media only screen and (max-width: 1080px) {
    .description{
-     font-size: 42px;
+     /* font-size: 42px;
+     padding-bottom: ; */
   } 
 }
-   @media only screen and (max-width: 1005px) {
+@media only screen and (max-width: 1065px) {
+ .main1{
+  padding-bottom: 110px;
+ }
+}
+   @media only screen and (max-width: 1020px) {
   .main1{
-    padding: 60px;
+    padding-bottom: 125px;
   }
 
 }
@@ -90,11 +96,9 @@
       padding-right: 15px;
    }
      .main1{
-       /* position:static; */
-       /* height: auto; */
-       /* text-align: center; */
+    
        margin-bottom: 1rem;
-       /* margin-top: 100px; */
+       padding-bottom: 135px;
     }
     .intro-img{
        float:none;
@@ -112,6 +116,15 @@
     }
  }
 
+
+ @media only screen and (max-width: 960px) {
+.description{
+  font-size: 38px;
+}
+.main1{
+  padding-bottom: 160px;
+}
+ }
  @media only screen and (max-width: 920px) {
   .main1{
     /* padding: 30px; */
@@ -119,16 +132,20 @@
 
 }
 
-
+@media only screen and (max-width: 890px) {
+ .main1{
+  padding-bottom: 175px;
+ }
+}
  @media only screen and (max-width: 822px) {
   .description{
-    font-size: 36px;
+    /* font-size: 36px; */
     
  } 
- .main1{
+ /* .main1{
   
   height: 350px;
- }
+ } */
 
 }
 
@@ -140,47 +157,31 @@
    .intro-img{
       margin-bottom: 1rem;
    }
+
+   .description{
+    font-size: 34px;
+   }
+   .main1{
+    padding-bottom: 190px;
+   }
  }
 
- @media only screen and (max-width: 730px) {
-  .description{
-    font-size: 32px;
- } 
-
-}
-
-@media only screen and (max-width: 665px) {
-  .description{
-    width: 60%;
- } 
  
 
-}
+
 @media only screen and (max-width: 600px) {
   .description{
-    font-size: 28px;
+    font-size: 24px;
  } 
 
-}
-
-@media only screen and (max-width: 560px) {
-  .description{
-    font-size: 28px;
- } 
-
-
-}
-
-@media only screen and (max-width: 450px) {
-  .description{
-    text-align: center;
- } 
  .main1{
-  justify-content:center;
-  padding: 0;
+  height: 350px;
+  padding-bottom: 110px;
  }
 
+
 }
+
 
 
  .alerte1{
