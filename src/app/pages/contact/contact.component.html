@@ -1,56 +1,58 @@
-<div class="containerForm">
-    <div class="formBox">
-        <div class="row">
-            <div class="titreForm col-md-12">
-                <h3>Formulaire de Contact</h3>
-            </div>
-            <!-- <div class="col-lg-2">
-                <fa-icon class="pencil" [icon]="faPencil"></fa-icon>
-            </div>  -->
-        </div>
-        <hr>
-        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+<div class="container">
+    <div class="containerForm">
+        <div class="formBox">
             <div class="row">
-                <div class="form-group col-md-6">
-                    <label for="inputNom">Nom</label>
-                    <input required pattern="[a-zA-Z]+" type="text" class="form-control" id="inputNom" #nom="ngModel" placeholder="Nom" name="nom" [(ngModel)]="user.nom">
-                    <div class="alert alert-danger" *ngIf="nom.touched && !nom.valid">
-                        <div *ngIf="nom.errors?.['required']">Nom requis</div>
-                        <!--<div *ngIf="nom.errors?.['pattern']">Lettres uniquement</div>-->
+                <div class="titreForm col-md-12">
+                    <h3>Formulaire de Contact</h3>
+                </div>
+                <!-- <div class="col-lg-2">
+                    <fa-icon class="pencil" [icon]="faPencil"></fa-icon>
+                </div>  -->
+            </div>
+            <hr>
+            <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="inputNom">Nom</label>
+                        <input required pattern="[a-zA-Z]+" type="text" class="form-control" id="inputNom" #nom="ngModel" placeholder="Nom" name="nom" [(ngModel)]="user.nom">
+                        <div class="alert alert-danger" *ngIf="nom.touched && !nom.valid">
+                            <div *ngIf="nom.errors?.['required']">Nom requis</div>
+                            <!--<div *ngIf="nom.errors?.['pattern']">Lettres uniquement</div>-->
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPrenom">Prénom</label>
+                        <input required type="text" class="form-control" id="inputPrenom" #prenom="ngModel" placeholder="Prénom" name="prenom" [(ngModel)]="user.prenom">
+                        <div class="alert alert-danger" *ngIf="prenom.touched && prenom.errors?.['required']">Prenom requis</div>
                     </div>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="inputPrenom">Prénom</label>
-                    <input required type="text" class="form-control" id="inputPrenom" #prenom="ngModel" placeholder="Prénom" name="prenom" [(ngModel)]="user.prenom">
-                    <div class="alert alert-danger" *ngIf="prenom.touched && prenom.errors?.['required']">Prenom requis</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label for="inputEmail">Email</label>
-                    <input required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" class="form-control" id="inputEmail" #email="ngModel" placeholder="Email" name="email" [(ngModel)]="user.email">
-                    <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
-                        <div *ngIf="email.errors?.['required']">Email requis</div>
-                        <div *ngIf="email.errors?.['pattern']">Format de l'email invalide</div>
-                    </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail">Email</label>
+                        <input required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" class="form-control" id="inputEmail" #email="ngModel" placeholder="Email" name="email" [(ngModel)]="user.email">
+                        <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                            <div *ngIf="email.errors?.['required']">Email requis</div>
+                            <div *ngIf="email.errors?.['pattern']">Format de l'email invalide</div>
+                        </div>
 
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputSociete">Société (facultatif)</label>
+                        <input type="text" class="form-control" id="inputSociete" #societe="ngModel" placeholder="Société" name="societe" [(ngModel)]="user.societe">
+                    </div>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="inputSociete">Société (facultatif)</label>
-                    <input type="text" class="form-control" id="inputSociete" #societe="ngModel" placeholder="Société" name="societe" [(ngModel)]="user.societe">
+                <div class="row">
+                    <label for="message">Message</label>
+                    <div class="form-group col-md-12">    
+                        <textarea required class="form-control" id="message" #message="ngModel" rows="3" placeholder="Votre Message" name="message" [(ngModel)]="user.message"></textarea>
+                        <div class="alert alert-danger" *ngIf="message.touched && message.errors?.['required']">Message requis</div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <label for="message">Message</label>
-                <div class="form-group col-md-12">    
-                    <textarea required class="form-control" id="message" #message="ngModel" rows="3" placeholder="Votre Message" name="message" [(ngModel)]="user.message"></textarea>
-                    <div class="alert alert-danger" *ngIf="message.touched && message.errors?.['required']">Message requis</div>
+                <div class="buttonForm">
+                    <button type="submit" class="btn btn-primary" [class]="buttonState">Envoyez</button>  <!--[disabled]="!contactForm.valid"-->
+                    <div [class]="state">Envoi en cours...</div>
                 </div>
-            </div>
-            <div class="buttonForm">
-                <button type="submit" class="btn btn-primary" [class]="buttonState">Envoyez</button>  <!--[disabled]="!contactForm.valid"-->
-                <div [class]="state">Envoi en cours...</div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>

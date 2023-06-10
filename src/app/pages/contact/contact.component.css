@@ -1,3 +1,9 @@
+.container{
+    height: calc(100vh - 48px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .containerForm{
     margin: 0 auto ;
     width: var(--size1);

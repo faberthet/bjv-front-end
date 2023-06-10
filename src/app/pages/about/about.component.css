@@ -1,4 +1,9 @@
-
+.container{
+   height: calc(100vh - 48px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 
 .container-about{
    width: var(--size1);
