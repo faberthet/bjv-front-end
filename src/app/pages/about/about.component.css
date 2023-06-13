@@ -6,20 +6,23 @@
 }
 
 .container-about{
-   width: var(--size1);
+   width: 991px;
    margin: 0 auto;
    padding: 15px;
    border: solid 5px var(--bgcolor2);
    border-radius: 10px;
    font-size: 1.2rem;
    background-color: var(--bgcolor1);
+   /* border: solid 5px rgb(255, 255, 255);
+   background-color: rgb(3, 24, 4);
+   color: white; */
 }
 h3{
    text-align: center;
 }
 .about{
    width: var(--size1);
-   height: 550px;
+   /* height: 550px; */
    /* background-image: url('src/assets/images/acc4mir.jpg'); */
    background-size: cover;
    display: flex;

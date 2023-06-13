@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+ flex-direction: column;
 }
 
 .description{
@@ -20,6 +20,11 @@
   background-color: rgba(0, 0, 0, 0.452);
   padding: 30px;
   
+}
+.decal{
+  height: 96px;
+  /* background-color: aliceblue; */
+  width: 2px;
 }
 
 

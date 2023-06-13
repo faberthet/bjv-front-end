@@ -29,7 +29,8 @@
    /* --bgcolor1: rgb(255, 255, 255); */
    --bgcolor1t:rgba(238, 232, 170, 0.801);
    --bgcolor3:black ;
-   --size1: 100%;
+   --size1: 991px;
+
    color:#ffffff;
    color:saddlebrown;
 }
