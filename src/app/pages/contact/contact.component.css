@@ -1,8 +1,9 @@
+
 .container{
     height: calc(100vh - 48px);
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* margin-top: 220px; */
 }
 .containerForm{
     margin: 0 auto ;
@@ -10,7 +11,7 @@
 }
 .formBox{
     /* box-shadow: -1px 1px 60px 10px black;
-    background-color: rgba(0, 0, 0, 0.404); */
+    background-cbackground-color:var(--bgcolor1);olor: rgba(0, 0, 0, 0.404); */
     background-color:var(--bgcolor1);
     border: solid 5px var(--bgcolor2);
     border-radius: 10px;
@@ -73,32 +74,12 @@ height: 45px;
 font-size: 1.1rem;
 }
 
-@media only screen and (max-width: 1270px) {
-    /* .containerForm{
-       width: 80%;
-    } */
- }
 
 @media only screen and (max-width: 991px) {
-    .containerForm{
-        /* width: 95%; */
+    .container{
+        margin-top: 70px;
     }
 }
 
 
-
-@media only screen and (max-width: 991px) {
-    .formBox{
-        /* width: 90%; */
-    }
-    .containerForm{
-        margin: 0 auto;
-    }
-    
-}
-@media only screen and (max-width: 500px) {
-    .formBox{
-        width: 100%;
-    }
-}
 

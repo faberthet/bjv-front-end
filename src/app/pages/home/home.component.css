@@ -1,5 +1,6 @@
-.container{
+.intro{
   height: calc(100vh - 48px);
+  /* height: 70vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,17 +9,20 @@
 
 .description{
   text-align: center;
-  width: 60%;
+  width: 750px;
   color: white;
   font-weight:500;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 38px;
   text-shadow: 1px 1px 2px rgb(0, 0, 0);
 
-  border: 4px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.452);
   padding: 30px;
+
+  position: absolute;
+  top:300px;
   
 }
 .decal{
@@ -90,124 +94,29 @@
 }   
 
  
- @media only screen and (max-width: 1120px) {
-   .content-cadre{
+ @media only screen and (max-width: 991px) {
+ .description{
+  font-size: 28px;
+  width: 550px;
+  padding: 15px;
+ }
+ }
+
+ @media only screen and (max-width: 770px) {
+  .description{
+   font-size: 24px;
+   width: 450px;
+   padding: 15px;
+  }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .description{
+     font-size: 24px;
      width: 95%;
-  } 
- }
-  @media only screen and (max-width: 1080px) {
-   .description{
-     /* font-size: 42px;
-     padding-bottom: ; */
-  } 
-}
-@media only screen and (max-width: 1065px) {
- .main1{
-  padding-bottom: 110px;
- }
-}
-   @media only screen and (max-width: 1020px) {
-  .main1{
-    padding-bottom: 125px;
-  }
-
-}
-
- 
-  @media only screen and (max-width: 991px) {
-   .content-cadre{
-      /* padding-top: 100px ; */
-      padding-bottom: 1rem ;
-      padding-left: 15px;
-      padding-right: 15px;
-   }
-     .main1{
-    
-       margin-bottom: 1rem;
-       padding-bottom: 135px;
+     padding: 15px;
     }
-    .intro-img{
-       float:none;
-       height: auto;
-       width: 100%;
     }
-    
-    .separation{
-      display: none;
-    }
-
-    footer{
-       margin-top: 0;
- 
-    }
- }
-
-
- @media only screen and (max-width: 960px) {
-.description{
-  font-size: 38px;
-}
-.main1{
-  padding-bottom: 160px;
-}
- }
- @media only screen and (max-width: 920px) {
-  .main1{
-    /* padding: 30px; */
-  }
-
-}
-
-@media only screen and (max-width: 890px) {
- .main1{
-  padding-bottom: 175px;
- }
-}
- @media only screen and (max-width: 822px) {
-  .description{
-    /* font-size: 36px; */
-    
- } 
- /* .main1{
-  
-  height: 350px;
- } */
-
-}
-
- @media only screen and (max-width: 750px) {
-   .content-cadre{
-      padding-top: 0 ;
-   
-   }
-   .intro-img{
-      margin-bottom: 1rem;
-   }
-
-   .description{
-    font-size: 34px;
-   }
-   .main1{
-    padding-bottom: 190px;
-   }
- }
-
- 
-
-
-@media only screen and (max-width: 600px) {
-  .description{
-    font-size: 24px;
- } 
-
- .main1{
-  height: 350px;
-  padding-bottom: 110px;
- }
-
-
-}
-
 
 
  .alerte1{
