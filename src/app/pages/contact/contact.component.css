@@ -3,8 +3,10 @@
     height: calc(100vh - 48px);
     display: flex;
     justify-content: center;
-    /* margin-top: 220px; */
+    align-items: center;
+    
 }
+
 .containerForm{
     margin: 0 auto ;
     width: var(--size1);
@@ -18,6 +20,8 @@
     width: 100%;
     margin: auto;
     padding: 20px;
+    
+  
 }
 .titreForm{
    
