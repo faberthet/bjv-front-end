@@ -1,11 +1,17 @@
 .intro2{
   text-align: center;
   height: calc(100vh - 48px);
-  padding-top: 70px;
+  /* padding-top: 70px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/* position: absolute; */
 }
+
 .homepic{
   width: 700px;
   height: auto;
+  /* position: absolute; */
 }
 
 
@@ -104,29 +110,41 @@
    margin-bottom: 10px;
 }   
 
- 
+ @media only screen and (max-width: 1720px) {
+  .homepic{
+    width: 650px;
+  }
+}
+@media only screen and (max-width: 1545px) {
+  .homepic{
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 1420px) {
+  .homepic{
+    width: 550px;
+  }
+}
+/* @media only screen and (max-width: 1300px) {
+  .homepic{
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 1235px) {
+  .homepic{
+    width: 450px;
+  }
+} */
  @media only screen and (max-width: 991px) {
- .description{
-  font-size: 28px;
-  width: 550px;
-  padding: 15px;
- }
+
  }
 
  @media only screen and (max-width: 770px) {
-  .description{
-   font-size: 24px;
-   width: 450px;
-   padding: 15px;
-  }
+  
   }
 
   @media only screen and (max-width: 500px) {
-    .description{
-     font-size: 24px;
-     width: 95%;
-     padding: 15px;
-    }
+ 
     }
 
 
