@@ -4,13 +4,13 @@
 nav{
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 991px;
+  /* width: 991px;
   margin: 0 auto;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
-ul{
+/* ul{
   list-style-type: none;
   padding-left: 0;
   display: inline;
@@ -26,7 +26,7 @@ a{
 }
 .bars{
   cursor: pointer;
-}
+} */
 
 /* .bjv{
   display: flex;
