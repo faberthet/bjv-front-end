@@ -28,10 +28,11 @@
         <img class="leaf" src="../assets/images/leaf5.png" alt="icon leaf"> BJV
     </div>
     <div class="menu">
-        <ul>
+        <ul *ngIf="display || currentWindowWidth > 800">
             <li><a class="" routerLink="/">ACCUEIL</a></li>
             <li><a class="" routerLink="about">A PROPOS</a></li>
             <li><a class="" routerLink="contact">CONTACT</a></li>
         </ul>
+        <fa-icon class="bars" *ngIf="currentWindowWidth <= 800" (click)="toggleBars()" [icon]="faBars"></fa-icon>
     </div>
 </nav>
