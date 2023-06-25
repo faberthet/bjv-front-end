@@ -1,20 +1,39 @@
+.background{
+    width: 100%;
+   background-color: white;
+   
+   /* padding-top: 30px; */
+}
 
 .container{
     height: calc(100vh - 48px);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
     
+}
+.txt{
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 700px;
+}
+h2{
+    margin-bottom: 30px;
 }
 
 .containerForm{
     margin: 0 auto ;
     width: var(--size1);
+    padding-top: 50px;
+    /* padding-bottom: 50px; */
 }
 .formBox{
     /* box-shadow: -1px 1px 60px 10px black;
     background-cbackground-color:var(--bgcolor1);olor: rgba(0, 0, 0, 0.404); */
-    background-color:var(--bgcolor1);
+    /* background-color:var(--bgcolor1); */
     border: solid 5px var(--bgcolor2);
     border-radius: 10px;
     width: 100%;
