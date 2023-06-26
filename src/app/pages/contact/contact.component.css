@@ -8,8 +8,8 @@
 
 .container{
     /* height: calc(100vh - 48px); */
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     /* justify-content: center; */
     /* align-items: center; */
     
@@ -98,10 +98,22 @@ height: 45px;
 font-size: 1.1rem;
 }
 
+@media only screen and (max-width: 1200px) {
+    .containerForm{
+        width: 95%;
+    }
+}
 
 @media only screen and (max-width: 991px) {
     .container{
         margin-top: 70px;
+    }
+    .containerForm{
+        width: 100%;
+    }
+  
+    .txt{
+        width: 100%;
     }
 }
 

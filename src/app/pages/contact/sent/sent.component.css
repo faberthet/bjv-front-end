@@ -1,13 +1,8 @@
 .sent{
     text-align: center;
-    background-color: darkseagreen;
-    margin-top: 50px;
-    padding: 20px;
-    margin-bottom: 450px;
-}
-@media only screen and (max-width: 991px) {
-    .sent{
-        margin-bottom: 650px;
-    }
-
+    background-color: rgb(224, 224, 224);
+    /* margin-top: 50px; */
+    padding: 100px;
+    height: calc(100vh - 48px);
+    font-size: 1.6rem;
 }
