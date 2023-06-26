@@ -2,15 +2,15 @@
 .background{
    width: 100%;
    
-   /* background-color: white;
-   background-image: url('src/assets/images/bg9.jpg');  
+   background-color: white;
+   /* background-image: url('src/assets/images/bg9.jpg');   */
    background-size: cover;
    background-attachment: fixed;  
-   background-position: center; */
+   background-position: center;
    /* color: aliceblue; */
    /* background: var(--bgcolor1) url("src/assets/images/grey.jpg") right bottom no-repeat; */
-   /* padding-bottom: 50px; */
-   
+   padding-bottom: 50px;
+   padding-top: 50px;
 }
 .cadre-titre{
    /* background-color: aquamarine; */
@@ -27,7 +27,7 @@ background-position:center; */
 
 .container{
   
-   height: calc(100vh - 48px);
+   /* height: calc(100vh - 48px); */
    /* padding-top: 100px; */
    display: flex;
    align-items: center;
