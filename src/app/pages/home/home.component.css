@@ -1,6 +1,7 @@
 .intro2{
   text-align: center;
-  height: calc(100vh - 48px);
+  /* height: calc(100vh - 48px); */
+  height: calc(100vh);
   /* padding-top: 70px; */
   display: flex;
   justify-content: center;

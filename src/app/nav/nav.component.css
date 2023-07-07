@@ -1,5 +1,6 @@
 .leaf{
   margin-right: 5px;
+  height: 26px;
 }
 nav{
   padding-top: 5px;
@@ -10,6 +11,10 @@ nav{
   color: white;
   display: flex;
   justify-content: space-between; */
+}
+.fix{
+  position: fixed;
+  width: 100%;
 }
 /* ul{
   list-style-type: none;
